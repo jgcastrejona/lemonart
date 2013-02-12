@@ -1,0 +1,57 @@
+/* Artfully masterminded by ZURB  */
+
+/* -------------------------------------------------- 
+   Table of Contents
+-----------------------------------------------------
+:: Shared Styles
+:: Page Name 1
+:: Page Name 2
+*/
+
+/* -----------------------------------------
+   Shared Styles
+----------------------------------------- */
+body{
+	font-size: 62.5% !important;
+}
+
+header{
+	background: #bebebe;
+	margin-bottom: 40px;
+}
+
+nav ul li{
+	display: inline-block;
+	padding: 25px 20px 5px 20px;
+}
+
+.derecha{
+	text-align: right;
+}
+
+.margentop{
+	margin-top: 5px;
+}
+
+footer{
+	background: #bebebe;
+	margin-top: 40px;
+}
+
+.icono{
+	font-size: 2em;
+}
+
+
+/* -----------------------------------------
+   Page Name 1
+----------------------------------------- */
+
+
+
+
+/* -----------------------------------------
+   Page Name 2
+----------------------------------------- */
+
+
