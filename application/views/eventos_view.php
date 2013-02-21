@@ -31,17 +31,27 @@
 				<div class="row">
 					<div class="three columns">
 						<div>
-							<a href="<?= base_url() ?>artistas/ejemplo"><img src="<?= base_url() ?>images/artista.gif"></a>
-							<h5><strong>Nombre del artista</strong></h5>
-							<hr>
-							<p>Breve biografia del artista, enlaces o descripcion. Lorem ipsum em portui</p>
+							<ul>
+								<li>
+									<a>Algo</a>	
+									<ul>
+										<li>ñam</li>
+										<li>ñom</li>
+									</ul>
+								</li>
+								<li>Algo 2</li>
+								<li>Algo 3</li>
+							</ul>
+							<ul>
+
+							</ul>
 						</div>
 					</div>
 
 					<div class="nine columns">
 						<div class="row">
 							<div class="three columns">
-								<a href="<?= base_url() ?>artistas/ejemplo"><img src="<?= base_url() ?>images/obra.gif"></a>
+								<a href="<?= base_url() ?>artistas/obra"><img src="<?= base_url() ?>images/obra.gif"></a>
 							</div>
 							<div class="three columns">
 								<a href="<?= base_url() ?>artistas/ejemplo"><img src="<?= base_url() ?>images/obra.gif"></a>
@@ -111,7 +121,12 @@
 		<!-- Included JS Files (Compressed) -->
 		<script src="javascripts/jquery.js"></script>
 		<script src="javascripts/foundation.min.js"></script>
-
+		<script>//el document ready solo espera hasta que el dom (estructura html) este cargada
+			$('document').ready(function(){
+				// carga el menu para los elementos que tengan la clase .menu
+				$('.menu').lksMenu();
+			});
+		</script>
 		<!-- Initialize JS Plugins -->
 		<script src="javascripts/app.js"></script>
 

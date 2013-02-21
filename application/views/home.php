@@ -136,12 +136,12 @@
 
 			<div class="row">
 				<div class="twelve columns">
-					<h3>Colaborador</h3>
+					<h3>Colaboradores</h3>
 
 					<div class="row">
 						<div class="twelve columns">
 							<div>
-								<p>Descripcion o comentario sobre los coolaboradores mas representativos</p>
+								<p>Descripcion o comentario sobre los colaboradores mas representativos</p>
 							</div>
 						</div>
 					</div>

@@ -41,7 +41,7 @@
 				<div class="row">
 					<div class="three columns">
 						<div class="">
-							<a href="<?=base_url()?>artistas/ejemplo"><img src="<?= base_url() ?>images/artista.gif"></a>
+							<a href="<?=base_url()?>artistas/perfil"><img src="<?= base_url() ?>images/artista.gif"></a>
 						</div>
 					</div>
 					<div class="three columns">

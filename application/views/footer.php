@@ -33,7 +33,7 @@
 		</section>
 
 		<section class="four columns">
-			<h6><strong>Avisos</strong></h6>
+			<h6><strong>Legal</strong></h6>
 			<p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosa.</p>
 
 		</section>
