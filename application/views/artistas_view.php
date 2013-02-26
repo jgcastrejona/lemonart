@@ -26,7 +26,7 @@
 		<?php
 		$this->load->view("header");
 		?>
-		<div class="row">
+		<div class="row contenedor">
 			<div class="twelve columns">
 				<h3>Artistas</h3>
 
@@ -120,6 +120,7 @@
 
 		<!-- Initialize JS Plugins -->
 		<script src="javascripts/app.js"></script>
+                <script src="javascripts/main.js"></script>
 
 	</body>
 </html>

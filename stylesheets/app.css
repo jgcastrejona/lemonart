@@ -1,10 +1,8 @@
-/* Artfully masterminded by ZURB  */
-
 /* -------------------------------------------------- 
    Table of Contents
 -----------------------------------------------------
 :: Shared Styles
-:: Page Name 1
+:: Eventos
 :: Page Name 2
 */
 
@@ -12,46 +10,100 @@
    Shared Styles
 ----------------------------------------- */
 body{
-	font-size: 62.5% !important;
+    font-size: 62.5% !important;
 }
 
 header{
-	background: #bebebe;
-	margin-bottom: 40px;
+    background: #bebebe;
+    margin-bottom: 40px;
 }
 
 nav ul li{
-	display: inline-block;
-	padding: 25px 20px 5px 20px;
+    display: inline-block;
+    padding: 25px 20px 5px 20px;
 }
 
 .derecha{
-	text-align: right;
+    text-align: right;
 }
 
 .margentop{
-	margin-top: 5px;
+    margin-top: 5px;
 }
 
 footer{
-	background: #bebebe;
-	margin-top: 40px;
+    background: #bebebe;
+    margin-top: 40px;
 }
 
 .icono{
-	font-size: 2em;
+    font-size: 2em;
+}
+
+/* -----------------------------------------
+  Eventos
+----------------------------------------- */
+
+.accordion {
+    margin: 0px; 
+}
+.accordion dt, .accordion dd {
+    padding: 10px;
+    border-bottom: 0; }
+.accordion dt/*:last-of-type*/, .accordion dd/*:last-of-type*/ {
+    border-bottom: 1px solid #bcbcbc; }
+.accordion dt a/*, .accordion dd a */{
+    display: block;
+    color: black;
+    font-weight: bold; }
+.accordion dd {
+    border-top: 0;
+    font-size: 12px; }
+.accordion dd:last-of-type {
+    border-top: 1px solid white;
+    position: relative;
+    top: -1px; }
+li{
+    list-style: none;
+}
+
+.eventospasados{
+    margin-bottom: 150px;
 }
 
 
 /* -----------------------------------------
-   Page Name 1
+   Colaborador
 ----------------------------------------- */
 
+.colaborador .seven h3{
+    margin-top: 0px;
+    border-bottom: 1px solid #bebebe;
+}
 
+.colaborador{
+    //border-bottom: 1px solid #bebebe;
+    margin-bottom: 20px !important;
+}
+
+/* -----------------------------------------
+   Blog
+----------------------------------------- */
+/*.entrada div{
+    border: 1px solid #000;
+    margin-bottom: 30px;
+    padding-right: 10px;
+}*/
+
+.entrada div h3{
+    text-align: center;
+}
+
+.entrada div p{
+    text-align: justify;
+}
 
 
 /* -----------------------------------------
    Page Name 2
 ----------------------------------------- */
-
-

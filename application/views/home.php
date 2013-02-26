@@ -189,6 +189,7 @@
 
 		<!-- Initialize JS Plugins -->
 		<script src="javascripts/app.js"></script>
+                <script src="javascripts/main.js"></script>
 
 
 		<script>
