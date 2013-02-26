@@ -23,6 +23,10 @@
             .item{
                 margin-bottom: 20px;
             }
+            
+            .item p{
+                margin-bottom: 0px;
+            }
         </style>
 
         <script src="javascripts/modernizr.foundation.js"></script>
@@ -40,21 +44,25 @@
                     <div class="three columns item">
                         <img src="http://www.placehold.it/300x300">
                         <p>Nombre | Precio: $1337</p>
+                        <p>Artista</p>
                     </div>
 
                     <div class="three columns item">
                         <img src="http://www.placehold.it/300x300">
                         <p>Nombre | Precio: $1337</p>
+                        <p>Artista</p>
                     </div>
 
                     <div class="three columns item">
                         <img src="http://www.placehold.it/300x300">
                         <p>Nombre | Precio: $1337</p>
+                        <p>Artista</p>
                     </div>
 
                     <div class="three columns item">
                         <img src="http://www.placehold.it/300x300">
                         <p>Nombre | Precio: $1337</p>
+                        <p>Artista</p>
                     </div>
                 </div>
 
@@ -62,21 +70,25 @@
                     <div class="three columns item">
                         <img src="http://www.placehold.it/300x300">
                         <p>Nombre | Precio: $1337</p>
+                        <p>Artista</p>
                     </div>
 
                     <div class="three columns item">
                         <img src="http://www.placehold.it/300x300">
                         <p>Nombre | Precio: $1337</p>
+                        <p>Artista</p>
                     </div>
 
                     <div class="three columns item">
                         <img src="http://www.placehold.it/300x300">
                         <p>Nombre | Precio: $1337</p>
+                        <p>Artista</p>
                     </div>
 
                     <div class="three columns item">
                         <img src="http://www.placehold.it/300x300">
                         <p>Nombre | Precio: $1337</p>
+                        <p>Artista</p>
                     </div>
                 </div>
                 
@@ -84,21 +96,25 @@
                     <div class="three columns item">
                         <img src="http://www.placehold.it/300x300">
                         <p>Nombre | Precio: $1337</p>
+                        <p>Artista</p>
                     </div>
 
                     <div class="three columns item">
                         <img src="http://www.placehold.it/300x300">
                         <p>Nombre | Precio: $1337</p>
+                        <p>Artista</p>
                     </div>
 
                     <div class="three columns item">
                         <img src="http://www.placehold.it/300x300">
                         <p>Nombre | Precio: $1337</p>
+                        <p>Artista</p>
                     </div>
 
                     <div class="three columns item">
                         <img src="http://www.placehold.it/300x300">
                         <p>Nombre | Precio: $1337</p>
+                        <p>Artista</p>
                     </div>
                 </div>
             </div>

@@ -11,8 +11,8 @@
                     <li><a href="<?= base_url() ?>colaboradores">Colaboradores</a></li>
                     <li><a href="<?= base_url() ?>blog">Blog</a></li>
                     <li><a href="<?= base_url() ?>tienda">Tienda</a></li>
-                    <li><a>Nosotros</a></li>
-                    <li><a class="small button">Contacto</a></li>
+                    <li><a href="<?= base_url() ?>nosotros">Nosotros</a></li>
+                    <li><a href="<?= base_url() ?>contacto"class="small button">Contacto</a></li>
                 </ul>
             </nav>
         </div>
