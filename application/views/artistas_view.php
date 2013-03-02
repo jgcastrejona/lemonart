@@ -34,79 +34,49 @@
 					<div class="twelve columns">
 						<div>
 							<p>Descripcion o comentario sobre los artistas mas representativos</p>
+							
 						</div>
 					</div>
 				</div>
 
+				<?php
+				$cont = 0;
+				$final = "";
+				foreach ($artistas as $artista) {
+					if ($cont % 4 == 0) {
+						?>
+						<div class='row'>
+							<?php
+						}
+
+						$final = $cont == count($artistas) - 1 ? "end" : "";
+						?>
+
+						<div class="three columns <?= $final ?>">
+							<a href="<?= base_url() ?>artistas/perfil/<?= $artista["id_artista"] ?> ">
+								<img src="<?= base_url() ?>images/<?= $artista["imagen"] ?>">
+							</a>
+							<a href="<?= base_url() ?>artistas/perfil/<?= $artista["id_artista"] ?>">
+								<p><?= $artista["nombre"] ?></p>
+							</a>
+						</div>
+
+						<?php
+						if ($cont % 4 == 3 || $final == "end") {
+							?>
+						</div>
+						<?php
+					}
+
+					$cont++;
+				}
+				?>
+
+
 				<div class="row">
-					<div class="three columns">
-						<div class="">
-							<a href="<?=base_url()?>artistas/perfil"><img src="<?= base_url() ?>images/artista.gif"></a>
-						</div>
-					</div>
-					<div class="three columns">
-						<div class="">
-							<a><img src="<?= base_url() ?>images/artista.gif"></a>
-						</div>
-					</div>
-					<div class="three columns">
-						<div class="">
-							<a><img src="<?= base_url() ?>images/artista.gif"></a>
-						</div>
-					</div>
-					<div class="three columns">
-						<div class="">
-							<a><img src="<?= base_url() ?>images/artista.gif"></a>
-						</div>
-					</div>
-				</div>
-				<br>
-				<br>
-				<div class="row">
-					<div class="three columns">
-						<div class="">
-							<a><img src="<?= base_url() ?>images/artista.gif"></a>
-						</div>
-					</div>
-					<div class="three columns">
-						<div class="">
-							<a><img src="<?= base_url() ?>images/artista.gif"></a>
-						</div>
-					</div>
-					<div class="three columns">
-						<div class="">
-							<a><img src="<?= base_url() ?>images/artista.gif"></a>
-						</div>
-					</div>
-					<div class="three columns">
-						<div class="">
-							<a><img src="<?= base_url() ?>images/artista.gif"></a>
-						</div>
-					</div>
-				</div>
-				<br>
-				<br>
-				<div class="row">
-					<div class="three columns">
-						<div class="">
-							<a><img src="<?= base_url() ?>images/artista.gif"></a>
-						</div>
-					</div>
-					<div class="three columns">
-						<div class="">
-							<a><img src="<?= base_url() ?>images/artista.gif"></a>
-						</div>
-					</div>
-					<div class="three columns">
-						<div class="">
-							<a><img src="<?= base_url() ?>images/artista.gif"></a>
-						</div>
-					</div>
-					<div class="three columns">
-						<div class="">
-							<a><img src="<?= base_url() ?>images/artista.gif"></a>
-						</div>
-					</div>
+					<?php
+					echo $this->pagination->create_links();
+					?>
 				</div>
 			</div>
 		</div>
@@ -120,7 +90,7 @@
 
 		<!-- Initialize JS Plugins -->
 		<script src="javascripts/app.js"></script>
-                <script src="javascripts/main.js"></script>
+		<script src="javascripts/main.js"></script>
 
 	</body>
 </html>

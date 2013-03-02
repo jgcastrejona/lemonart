@@ -44,8 +44,8 @@
                         <input type="text" placeholder="ej. direccion@dominio.com"/>
                         
                         <label>Mensaje</label>
-                        <input type="text" placeholder="ej. direccion@dominio.com"/>
-                        <a class="large button" href="#">Enivar</a>
+                        <textarea placeholder="Mensaje" rows="10"></textarea>
+                        <a class="large button right" href="#">Enviar</a>
 
 
                     </fieldset>
