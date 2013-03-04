@@ -5,10 +5,20 @@ if (!defined('BASEPATH'))
 
 class evento_model extends CI_Controller{
 	
-	public function obtener_eventos(){
+	public function obtener_eventos($anio){
 		$this->db->select("id_evento,nombre,lugar, anio, descripcion");
 		$this->db->order_by("id_evento", "asc");
-		$query = $this->db->get('evento');
+		$query = $this->db->get_where('evento', array("anio" => $anio));
+		return $query->result_array();
+	}
+	
+	public function obtener_anios(){
+		$query = $this->db->get('anio');
+		return $query->result_array();
+	}
+	
+	public function obtener_evento($id){
+		$query = $this->db->get_where('evento', array("id_evento" => $id));
 		return $query->result_array();
 	}
 }
