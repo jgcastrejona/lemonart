@@ -24,41 +24,41 @@
         </style>
 
 
-        <script src="javascripts/modernizr.foundation.js"></script>
+        <script src="<?= base_url() ?>javascripts/modernizr.foundation.js"></script>
     </head>
     <body>
-        <?php
-        $this->load->view("header");
-        ?>
+		<?php
+		$this->load->view("header");
+		?>
         <div class="row contenedor">
             <div class="ten columns offset-by-one">
-                <form>
-                    <fieldset>
+				<?php echo form_open('back/login'); ?>  
+				<fieldset>
+					<?php echo validation_errors(); ?>
+					<legend>Panel de control</legend>
 
-                        <legend>Panel de control</legend>
-
-                        <label>Usuario</label>
-                        <input type="text" placeholder="Usuario" />
-						<br>
-                        <label>Contraseña</label>
-                        <input type="password" placeholder="ej. direccion@dominio.com"/>
-                        <br>
-                        <input type="submit" class="large button right" href="#" value="Entrar">
+					<label>Usuario</label>
+					<input type="text" id="usuario" name="usuario"/>
+					<br>
+					<label>Contraseña</label>
+					<input type="password" id="pass" name="pass"/>
+					<br>
+					<input type="submit" class="large button right" href="#" value="Entrar">
 
 
-                    </fieldset>
-                </form>
+				</fieldset>
+				<? echo form_close(); ?>
             </div>
         </div>
-        <?php
-        $this->load->view("footer");
-        ?>
+		<?php
+		$this->load->view("footer");
+		?>
 
         <!-- Included JS Files (Compressed) -->
-        <script src="javascripts/jquery.js"></script>
-        <script src="javascripts/foundation.min.js"></script>
+        <script src="<?= base_url() ?>javascripts/jquery.js"></script>
+        <script src="<?= base_url() ?>javascripts/foundation.min.js"></script>
         <!-- Initialize JS Plugins -->
-        <script src="javascripts/app.js"></script>
-        <script src="javascripts/main.js"></script>
+        <script src="<?= base_url() ?>javascripts/app.js"></script>
+        <script src="<?= base_url() ?>javascripts/main.js"></script>
     </body>
 </html>

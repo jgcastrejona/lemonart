@@ -19,47 +19,51 @@
         <link rel="stylesheet" href="<?= base_url() ?>stylesheets/social_foundicons_ie7.css">
         <link rel="stylesheet" href="<?= base_url() ?>stylesheets/foundation.css">
         <link rel="stylesheet" href="<?= base_url() ?>stylesheets/app.css">
-        <style>
+		<?php foreach ($css_files as $file): ?>
+			<link type="text/css" rel="stylesheet" href="<?php echo $file; ?>" />
+		<?php endforeach; ?>
 
-        </style>
-
+		<style type='text/css'>
+			.flexigrid
+			{
+				font-size: 12px !important;
+			}
+		</style>
 
         <script src="<?= base_url() ?>javascripts/modernizr.foundation.js"></script>
     </head>
     <body>
-        <?php
-        $this->load->view("header");
-        ?>
-        <div class="row contenedor">
-            <div class="twelve columns">
-                <form>
-                    <fieldset>
-
-                        <legend>Contactanos</legend>
-
-                        <label>Nombre</label>
-                        <input type="text" placeholder="Nombre" />
-
-                        <label>Correo</label>
-                        <input type="text" placeholder="ej. direccion@dominio.com"/>
-                        
-                        <label>Mensaje</label>
-                        <textarea placeholder="Mensaje" rows="10"></textarea>
-                        <a class="large button right" href="#">Enviar</a>
-
-
-                    </fieldset>
-                </form>
-            </div>
+		<?php
+		$this->load->view("header");
+		?>
+        <div class="contenedor">
+			<div class="row">
+				<div class="twelve columns">
+					<ul class="nav-bar">
+						<li class=""><a href="#">Artistas</a></li>
+						<li class=""><a href="#">Nav Item 1</a></li>
+						<li class=""><a href="#">Nav Item 1</a></li>
+						<li class=""><a href="#">Nav Item 1</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="row">
+				<div class="twelve columns">
+					<?php echo $output; ?>
+				</div>
+			</div>
         </div>
-        <?php
-        $this->load->view("footer");
-        ?>
+		<?php
+		$this->load->view("footer");
+		?>
 
         <!-- Included JS Files (Compressed) -->
-        <script src="<?= base_url() ?>javascripts/jquery.js"></script>
+        <!--<script src="<?= base_url() ?>javascripts/jquery.js"></script>-->
         <script src="<?= base_url() ?>javascripts/foundation.min.js"></script>
         <!-- Initialize JS Plugins -->
+		<?php foreach ($js_files as $file): ?>
+			<script src="<?php echo $file; ?>"></script>
+		<?php endforeach; ?>
         <script src="<?= base_url() ?>javascripts/app.js"></script>
         <script src="<?= base_url() ?>javascripts/main.js"></script>
     </body>

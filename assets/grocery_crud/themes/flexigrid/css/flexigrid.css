@@ -770,7 +770,8 @@ input.field_error
 {
 	text-decoration: underline;	
 }
-a
+
+/*a
 {
 	color: blue;
 	text-decoration: none;	
@@ -778,7 +779,8 @@ a
 a:hover
 {
 	text-decoration: underline;	
-}
+}*/
+
 .small-loading
 {
 	background: url('images/load.gif') no-repeat;
