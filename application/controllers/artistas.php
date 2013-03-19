@@ -34,7 +34,7 @@ class Artistas extends CI_Controller {
 	}
 
 	public function pagina($offset = 0) {
-		$limit = 12; 
+		$limit = 12;
 		$this->load->library('pagination');
 		$this->load->model("artista_model");
 
@@ -62,13 +62,20 @@ class Artistas extends CI_Controller {
 
 	public function perfil() {
 		//saca artista de la base
-		$this->load->view("artista_view");
+		$this->load->model("artista_model");
+		$id = $this->uri->segment(3);
+		$data["artista"] = $this->artista_model->obtener_artista($id);
+		$data["obras"] = $this->artista_model->obtener_obras($id);
+
+		$this->load->view("artista_view", $data);
 	}
 
 	public function obra() {
-		$this->load->model("obra");
-		//sacar la obra de la base de datos
-		$this->load->view("obra_demo_view");
+		$this->load->model("artista_model");
+		$id = $this->uri->segment(3);
+		$datos["obra"] = $this->artista_model->obtener_obra($id);
+		$datos["artista"] = $this->artista_model->obtener_artista($datos["obra"][0]["id_artista"]);
+		$this->load->view("obra_view", $datos);
 	}
 
 }

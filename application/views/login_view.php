@@ -19,33 +19,46 @@
         <link rel="stylesheet" href="<?= base_url() ?>stylesheets/social_foundicons_ie7.css">
         <link rel="stylesheet" href="<?= base_url() ?>stylesheets/foundation.css">
         <link rel="stylesheet" href="<?= base_url() ?>stylesheets/app.css">
+        <style>
 
-		<style>
+        </style>
 
-		</style>
 
-        <script src="<?= base_url() ?>javascripts/modernizr.foundation.js"></script>
+        <script src="javascripts/modernizr.foundation.js"></script>
     </head>
     <body>
-		<?php
-		$this->load->view("header");
-		?>
+        <?php
+        $this->load->view("header");
+        ?>
         <div class="row contenedor">
-            <div class="ten columns offset-by-one end single-entrada">
-				<h2><?= $entrada[0]["titulo"] ?></h2>
-				<p><?= $entrada[0]["texto"] ?></p>
+            <div class="ten columns offset-by-one">
+                <form>
+                    <fieldset>
+
+                        <legend>Panel de control</legend>
+
+                        <label>Usuario</label>
+                        <input type="text" placeholder="Usuario" />
+						<br>
+                        <label>Contraseña</label>
+                        <input type="password" placeholder="ej. direccion@dominio.com"/>
+                        <br>
+                        <input type="submit" class="large button right" href="#" value="Entrar">
+
+
+                    </fieldset>
+                </form>
             </div>
         </div>
-		<?php
-		$this->load->view("footer");
-		?>
+        <?php
+        $this->load->view("footer");
+        ?>
 
         <!-- Included JS Files (Compressed) -->
-        <script src="<?= base_url() ?>javascripts/jquery.js"></script>
-        <script src="<?= base_url() ?>javascripts/foundation.min.js"></script>
+        <script src="javascripts/jquery.js"></script>
+        <script src="javascripts/foundation.min.js"></script>
         <!-- Initialize JS Plugins -->
-        <script src="<?= base_url() ?>javascripts/app.js"></script>
-        <script src="<?= base_url() ?>javascripts/main.js"></script>
-
+        <script src="javascripts/app.js"></script>
+        <script src="javascripts/main.js"></script>
     </body>
 </html>

@@ -25,6 +25,22 @@ class artista_model extends CI_Model {
 		return $query->result_array();
 	}
 
+	function obtener_obras($id) {
+		$this->db->select("id_obra,titulo,miniatura,id_artista");
+		$query = $this->db->get_where("obra", array("id_artista" => $id));
+		return $query->result_array();
+	}
+
+	function obtener_artista($id) {
+		$query = $this->db->get_where("artista", array("id_artista" => $id));
+		return $query->result_array();
+	}
+	
+	function obtener_obra($id){
+		$query = $this->db->get_where("obra", array("id_obra" => $id));
+		return $query->result_array();
+	}
+
 }
 
 ?>

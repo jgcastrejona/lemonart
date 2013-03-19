@@ -3,12 +3,14 @@
 -----------------------------------------------------
 :: Shared Styles
 :: Eventos
-:: Page Name 2
+:: Colabordor
+:: Blog
 */
 
 /* -----------------------------------------
    Shared Styles
 ----------------------------------------- */
+
 body{
     font-size: 62.5% !important;
 }
@@ -89,12 +91,6 @@ li{
 /* -----------------------------------------
    Blog
 ----------------------------------------- */
-/*.entrada div{
-    border: 1px solid #000;
-    margin-bottom: 30px;
-    padding-right: 10px;
-}*/
-
 .entrada div h3{
     text-align: center;
 }
@@ -103,7 +99,17 @@ li{
     text-align: justify;
 }
 
+.entrada div{
+	box-shadow: 0 1px 3px rgba(34, 25, 25, 0.9);
+	width: 100%;
+	padding: 20px;
+	margin-bottom: 20px;
+}
 
-/* -----------------------------------------
-   Page Name 2
------------------------------------------ */
+.single-entrada h2{
+	text-align: center;
+}
+
+.single-entrada{
+	text-align: justify;
+}

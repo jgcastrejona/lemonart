@@ -20,19 +20,19 @@
 		<link rel="stylesheet" href="<?= base_url() ?>stylesheets/foundation.css">
 		<link rel="stylesheet" href="<?= base_url() ?>stylesheets/app.css">
 
-		<script src="javascripts/modernizr.foundation.js"></script>
+		<script src="<?= base_url() ?>javascripts/modernizr.foundation.js"></script>
 	</head>
 	<body>
 		<?php
 		$this->load->view("header");
 		?>
-		<div class="row">
+		<div class="row contenedor">
 			<div class="twelve columns">
-				<img src="<?=base_url()?>images/slide1.png">
+				<img src="<?= base_url() ?>images/<?= $obra[0]["imagen"] ?>">
 				<br>
-				<h3>Nombre de la obra</h3>
-				<h4><a href="#">Artista</a> | Material</h4>
-				<p>Lorem lorem loremi impsujm aloiustr atrury magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosa</p>
+				<h3><?=$obra[0]["titulo"] ?></h3>
+				<h4><a href="<?= base_url() ?>artistas/perfil/<?= $artista[0]["id_artista"] ?>"><?= $artista[0]["nombre"] ?></a> | Material</h4>
+				<p><?= $obra[0]["descripcion"] ?></p>
 			</div>
 		</div>
 		<?php
@@ -40,11 +40,12 @@
 		?>
 
 		<!-- Included JS Files (Compressed) -->
-		<script src="javascripts/jquery.js"></script>
-		<script src="javascripts/foundation.min.js"></script>
+		<script src="<?= base_url() ?>javascripts/jquery.js"></script>
+		<script src="<?= base_url() ?>javascripts/foundation.min.js"></script>
 
 		<!-- Initialize JS Plugins -->
-		<script src="javascripts/app.js"></script>
+		<script src="<?= base_url() ?>javascripts/app.js"></script>
+		<script src="<?= base_url() ?>javascripts/main.js"></script>
 
 	</body>
 </html>

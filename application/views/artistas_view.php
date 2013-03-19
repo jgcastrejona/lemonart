@@ -34,7 +34,7 @@
 					<div class="twelve columns">
 						<div>
 							<p>Descripcion o comentario sobre los artistas mas representativos</p>
-							
+
 						</div>
 					</div>
 				</div>
@@ -74,9 +74,11 @@
 
 
 				<div class="row">
-					<?php
-					echo $this->pagination->create_links();
-					?>
+					<div class="twelve columns">
+						<?php
+						echo $this->pagination->create_links();
+						?>
+					</div>
 				</div>
 			</div>
 		</div>

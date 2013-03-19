@@ -20,7 +20,7 @@
 		<link rel="stylesheet" href="<?= base_url() ?>stylesheets/foundation.css">
 		<link rel="stylesheet" href="<?= base_url() ?>stylesheets/app.css">
 
-		<script src="javascripts/modernizr.foundation.js"></script>
+		<script src="<?= base_url() ?>javascripts/modernizr.foundation.js"></script>
 	</head>
 	<body>
 		<?php
@@ -31,74 +31,46 @@
 				<div class="row">
 					<div class="three columns">
 						<div>
-							<a href=""><img src="<?= base_url() ?>images/artista.gif"></a>
-							<h5><strong>Nombre del artista</strong></h5>
+							<img src="<?= base_url() ?>images/<?= $artista[0]["imagen"] ?>">
+							<h5><strong><?= $artista[0]["nombre"] ?></strong></h5>
 							<hr>
-							<p>Breve biografia del artista, enlaces o descripcion. Lorem ipsum em portui</p>
+							<p><?= $artista[0]["biografia"] ?></p>
 						</div>
 					</div>
 
 					<div class="nine columns">
-						<div class="row">
-							<div class="three columns">
-								<a href="<?= base_url() ?>artistas/obra"><img src="<?= base_url() ?>images/obra.gif"></a>
-							</div>
-							<div class="three columns">
-								<a href="<?= base_url() ?>artistas/ejemplo"><img src="<?= base_url() ?>images/obra.gif"></a>
-							</div>
-							<div class="three columns">
-								<a href="<?= base_url() ?>artistas/ejemplo"><img src="<?= base_url() ?>images/obra.gif"></a>
-							</div>
-							<div class="three columns">
-								<a href="<?= base_url() ?>artistas/ejemplo"><img src="<?= base_url() ?>images/obra.gif"></a>
-							</div>
-						</div>
-						<br><br>
-						<div class="row">
-							<div class="three columns">
-								<a href="<?= base_url() ?>artistas/ejemplo"><img src="<?= base_url() ?>images/obra.gif"></a>
-							</div>
-							<div class="three columns">
-								<a href="<?= base_url() ?>artistas/ejemplo"><img src="<?= base_url() ?>images/obra.gif"></a>
-							</div>
-							<div class="three columns">
-								<a href="<?= base_url() ?>artistas/ejemplo"><img src="<?= base_url() ?>images/obra.gif"></a>
-							</div>
-							<div class="three columns">
-								<a href="<?= base_url() ?>artistas/ejemplo"><img src="<?= base_url() ?>images/obra.gif"></a>
-							</div>
-						</div>
-						<br><br>
-						<div class="row">
-							<div class="three columns">
-								<a href="<?= base_url() ?>artistas/ejemplo"><img src="<?= base_url() ?>images/obra.gif"></a>
-							</div>
-							<div class="three columns">
-								<a href="<?= base_url() ?>artistas/ejemplo"><img src="<?= base_url() ?>images/obra.gif"></a>
-							</div>
-							<div class="three columns">
-								<a href="<?= base_url() ?>artistas/ejemplo"><img src="<?= base_url() ?>images/obra.gif"></a>
-							</div>
-							<div class="three columns">
-								<a href="<?= base_url() ?>artistas/ejemplo"><img src="<?= base_url() ?>images/obra.gif"></a>
-							</div>
-						</div>
 
+						<?php
+						$cont = 0;
+						$final = "";
+						foreach ($obras as $obra) {
+							if ($cont % 4 == 0) {
+								?>
+								<div class='row'>
+									<?php
+								}
+
+								$final = $cont == count($obras) - 1 ? "end" : "";
+								?>
+
+								<div class="three columns <?= $final ?>">
+									<a href="<?= base_url() ?>artistas/obra/<?= $obra["id_obra"] ?> ">
+										<img src="<?= base_url() ?>images/<?= $obra["miniatura"] ?>">
+									</a>
+
+								</div>
+
+								<?php
+								if ($cont % 4 == 3 || $final == "end") {
+									?>
+								</div>
 						<br><br>
-						<div class="row">
-							<div class="three columns">
-								<a href="<?= base_url() ?>artistas/ejemplo"><img src="<?= base_url() ?>images/obra.gif"></a>
-							</div>
-							<div class="three columns">
-								<a href="<?= base_url() ?>artistas/ejemplo"><img src="<?= base_url() ?>images/obra.gif"></a>
-							</div>
-							<div class="three columns">
-								<a href="<?= base_url() ?>artistas/ejemplo"><img src="<?= base_url() ?>images/obra.gif"></a>
-							</div>
-							<div class="three columns">
-								<a href="<?= base_url() ?>artistas/ejemplo"><img src="<?= base_url() ?>images/obra.gif"></a>
-							</div>
-						</div>
+								<?php
+							}
+
+							$cont++;
+						}
+						?>
 					</div>
 
 				</div>
@@ -109,12 +81,12 @@
 		?>
 
 		<!-- Included JS Files (Compressed) -->
-		<script src="javascripts/jquery.js"></script>
-		<script src="javascripts/foundation.min.js"></script>
+		<script src="<?= base_url() ?>javascripts/jquery.js"></script>
+		<script src="<?= base_url() ?>javascripts/foundation.min.js"></script>
 
 		<!-- Initialize JS Plugins -->
-		<script src="javascripts/app.js"></script>
-                <script src="javascripts/main.js"></script>
+		<script src="<?= base_url() ?>javascripts/app.js"></script>
+		<script src="<?= base_url() ?>javascripts/main.js"></script>
 
 	</body>
 </html>

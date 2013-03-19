@@ -24,7 +24,7 @@
         </style>
 
 
-        <script src="<?=base_url()?>javascripts/modernizr.foundation.js"></script>
+        <script src="<?= base_url() ?>javascripts/modernizr.foundation.js"></script>
     </head>
     <body>
 		<?php
@@ -65,10 +65,10 @@
 			<div class="nine columns offset-by-one">
 				<h2><?= $evento[0]["nombre"] ?></h2>
 				<p><?= $evento[0]["descripcion"] ?></p>
-				
-				
-				
-				
+
+
+
+
 			</div>
 
 		</div>
@@ -78,10 +78,10 @@
 		?>
 
         <!-- Included JS Files (Compressed) -->
-        <script src="<?=base_url()?>javascripts/jquery.js"></script>
-        <script src="<?=base_url()?>javascripts/foundation.min.js"></script>
+        <script src="<?= base_url() ?>javascripts/jquery.js"></script>
+        <script src="<?= base_url() ?>javascripts/foundation.min.js"></script>
         <!-- Initialize JS Plugins -->
-        <script src="<?=base_url()?>javascripts/app.js"></script>
-        <script src="<?=base_url()?>javascripts/main.js"></script>
+        <script src="<?= base_url() ?>javascripts/app.js"></script>
+        <script src="<?= base_url() ?>javascripts/main.js"></script>
     </body>
 </html>
