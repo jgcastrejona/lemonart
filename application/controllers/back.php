@@ -46,12 +46,16 @@ class Back extends CI_Controller {
 
 			$crud->set_table('artista')
 					->set_subject('Artista')
-					->columns('nombre', 'biografia')
+					->columns('nombre', "imagen", 'biografia')
 					->display_as('nombre', 'Nombre')
+					->display_as("imagen", "Imagen")
 					->display_as('biografia', 'Biografía');
 
-			$crud->fields('nombre', 'biografia');
+
+			$crud->fields('nombre', "imagen", 'biografia');
 			$crud->required_fields('nombre', 'biografia');
+			$crud->set_field_upload('imagen', 'images');
+
 
 			$output = $crud->render();
 
