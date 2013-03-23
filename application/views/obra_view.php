@@ -28,11 +28,11 @@
 		?>
 		<div class="row contenedor">
 			<div class="twelve columns">
-				<img src="<?= base_url() ?>images/<?= $obra[0]["imagen"] ?>">
+				<img src="<?= base_url() ?>images/obras<?= $obra[0]["imagen"] ?>">
 				<br>
-				<h3><?=$obra[0]["titulo"] ?></h3>
+				<h3><?= $obra[0]["titulo"] ?></h3>
 				<h4><a href="<?= base_url() ?>artistas/perfil/<?= $artista[0]["id_artista"] ?>"><?= $artista[0]["nombre"] ?></a> | Material</h4>
-				<p><?= $obra[0]["descripcion"] ?></p>
+				<?= $obra[0]["descripcion"] ?>
 			</div>
 		</div>
 		<?php

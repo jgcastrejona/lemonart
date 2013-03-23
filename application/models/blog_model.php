@@ -17,8 +17,8 @@ class Blog_model extends CI_Model {
 	}
 
 	function obtener_blog($limit, $start) {
-		$this->db->select("id_entrada,titulo,resumen");
-		$this->db->order_by("id_entrada", "desc");
+		$this->db->select("id_entrada,titulo,texto");
+		$this->db->order_by("fecha", "desc");
 		$query = $this->db->get('blog', $limit, $start);
 		return $query->result_array();
 	}

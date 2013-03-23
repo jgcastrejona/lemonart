@@ -54,7 +54,7 @@
 
 						<div class="three columns <?= $final ?>">
 							<a href="<?= base_url() ?>artistas/perfil/<?= $artista["id_artista"] ?> ">
-								<img src="<?= base_url() ?>images/<?= $artista["imagen"] ?>">
+								<img src="<?= base_url() ?>images/artistas/<?= $artista["imagen"] ?>">
 							</a>
 							<a href="<?= base_url() ?>artistas/perfil/<?= $artista["id_artista"] ?>">
 								<p><?= $artista["nombre"] ?></p>

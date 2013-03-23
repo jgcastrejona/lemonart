@@ -64,7 +64,7 @@
 
 			<div class="nine columns offset-by-one">
 				<h2><?= $evento[0]["nombre"] ?></h2>
-				<p><?= $evento[0]["descripcion"] ?></p>
+				<?= $evento[0]["descripcion"] ?>
 
 
 

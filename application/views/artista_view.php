@@ -31,10 +31,10 @@
 				<div class="row">
 					<div class="three columns">
 						<div>
-							<img src="<?= base_url() ?>images/<?= $artista[0]["imagen"] ?>">
+							<img src="<?= base_url() ?>images/artistas/<?= $artista[0]["imagen"] ?>">
 							<h5><strong><?= $artista[0]["nombre"] ?></strong></h5>
 							<hr>
-							<p><?= $artista[0]["biografia"] ?></p>
+							<?= $artista[0]["biografia"] ?>
 						</div>
 					</div>
 
@@ -55,7 +55,7 @@
 
 								<div class="three columns <?= $final ?>">
 									<a href="<?= base_url() ?>artistas/obra/<?= $obra["id_obra"] ?> ">
-										<img src="<?= base_url() ?>images/<?= $obra["miniatura"] ?>">
+										<img src="<?= base_url() ?>images/obras/miniatura/<?= $obra["miniatura"] ?>">
 									</a>
 
 								</div>
@@ -64,7 +64,7 @@
 								if ($cont % 4 == 3 || $final == "end") {
 									?>
 								</div>
-						<br><br>
+								<br><br>
 								<?php
 							}
 

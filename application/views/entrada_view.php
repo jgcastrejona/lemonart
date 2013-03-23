@@ -33,7 +33,7 @@
         <div class="row contenedor">
             <div class="ten columns offset-by-one end single-entrada">
 				<h2><?= $entrada[0]["titulo"] ?></h2>
-				<p><?= $entrada[0]["texto"] ?></p>
+				<?= $entrada[0]["texto"] ?>
             </div>
         </div>
 		<?php

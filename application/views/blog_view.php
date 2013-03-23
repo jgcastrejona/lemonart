@@ -31,11 +31,11 @@
 				$cont = 0;
 				$final = "";
 				foreach ($blog as $entrada) {
-					/*if ($cont < count($blog) - 1) {
-						$final = "";
-					} else {
-						$final = "end";
-					}*/
+					/* if ($cont < count($blog) - 1) {
+					  $final = "";
+					  } else {
+					  $final = "end";
+					  } */
 					?>
 					<div class="entrada ten columns offset-by-one end">
 						<div>
@@ -44,9 +44,7 @@
 									<?= $entrada["titulo"] ?>
 								</a>
 							</h3>
-							<p>
-								<?= $entrada["resumen"] ?>
-							</p>
+							<?= $entrada["texto"] ?>
 						</div>
 					</div>
 
