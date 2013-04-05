@@ -15,6 +15,10 @@ body{
     font-size: 62.5% !important;
 }
 
+img{
+	width: 100%;
+}
+
 header{
     background: #bebebe;
     margin-bottom: 40px;

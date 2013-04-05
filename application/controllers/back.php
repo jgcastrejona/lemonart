@@ -170,7 +170,7 @@ class Back extends CI_Controller {
 			$crud = new grocery_CRUD();
 
 			$crud->set_table('evento')
-					->set_subject('Eventos')
+					->set_subject('Evento')
 					->columns('nombre', "lugar", 'anio', "descripcion")
 					->display_as('nombre', 'Nombre')
 					->display_as("lugar", "Lugar")
@@ -200,7 +200,7 @@ class Back extends CI_Controller {
 			$crud = new grocery_CRUD();
 
 			$crud->set_table('blog')
-					->set_subject('Eventos');
+					->set_subject('Entrada');
 			$output = $crud->render();
 
 			//$this->_example_output($output);

@@ -36,10 +36,10 @@
                     <br>    
                     <ul class="nav-bar vertical">
 						<?php
-						for ($i = 0; $i < count($años); $i++) {
+						for ($i = 0; $i < count($añosus); $i++) {
 							?>
 							<li class="has-flyout">
-								<a href="#"><?= $años[$i]["anio"] ?></a>
+								<a href="#"><?= $añosus[$i] ?></a>
 								<a href="#" class="flyout-toggle"><span> </span></a>
 								<ul class="flyout">
 									<?php
