@@ -34,6 +34,10 @@
 		<?php
 		$this->load->view("header");
 		?>
+		
+		<?php
+		//phpinfo();
+		?>
         <div class="contenedor">
 			<div class="row">
 				<dl class="tabs">

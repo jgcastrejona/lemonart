@@ -30,7 +30,7 @@
 			<div class="twelve columns">
 				<div class="row">
 					<div class="three columns">
-						<div>
+						<div class="imagen-artista">
 							<img src="<?= base_url() ?>images/artistas/<?= $artista[0]["imagen"] ?>">
 							<h5><strong><?= $artista[0]["nombre"] ?></strong></h5>
 							<hr>
@@ -53,10 +53,12 @@
 								$final = $cont == count($obras) - 1 ? "end" : "";
 								?>
 
-								<div class="three columns <?= $final ?>">
-									<a href="<?= base_url() ?>artistas/obra/<?= $obra["id_obra"] ?> ">
-										<img src="<?= base_url() ?>images/obras/miniatura/<?= $obra["miniatura"] ?>">
-									</a>
+								<div class="three columns mobile-two <?= $final ?>">
+									<div class="obra">
+										<a href="<?= base_url() ?>artistas/obra/<?= $obra["id_obra"] ?> ">
+											<img src="<?= base_url() ?>images/obras/miniatura/<?= $obra["imagen"] ?>">
+										</a>
+									</div>
 
 								</div>
 

@@ -52,10 +52,12 @@
 						$final = $cont == count($artistas) - 1 ? "end" : "";
 						?>
 
-						<div class="three columns <?= $final ?>">
-							<a href="<?= base_url() ?>artistas/perfil/<?= $artista["id_artista"] ?> ">
-								<img src="<?= base_url() ?>images/artistas/<?= $artista["imagen"] ?>">
-							</a>
+						<div class="three columns mobile-two <?= $final ?>">
+							<div class="contenedor-imagen-artista">
+								<a href="<?= base_url() ?>artistas/perfil/<?= $artista["id_artista"] ?> ">
+									<img src="<?= base_url() ?>images/artistas/<?= $artista["imagen"] ?>">
+								</a>
+							</div>
 							<a href="<?= base_url() ?>artistas/perfil/<?= $artista["id_artista"] ?>">
 								<p><?= $artista["nombre"] ?></p>
 							</a>

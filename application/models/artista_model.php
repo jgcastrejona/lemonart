@@ -26,7 +26,7 @@ class artista_model extends CI_Model {
 	}
 
 	function obtener_obras($id) {
-		$this->db->select("id_obra,titulo,miniatura,id_artista");
+		$this->db->select("id_obra,titulo,imagen,id_artista");
 		$query = $this->db->get_where("obra", array("id_artista" => $id));
 		return $query->result_array();
 	}

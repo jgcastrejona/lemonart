@@ -92,6 +92,10 @@ li{
     margin-bottom: 20px !important;
 }
 
+img .colaborador-logo{
+	width: auto !important;
+}
+
 /* -----------------------------------------
    Blog
 ----------------------------------------- */
@@ -116,4 +120,30 @@ li{
 
 .single-entrada{
 	text-align: justify;
+}
+
+
+/* -----------------------------------------
+   Artista
+----------------------------------------- */
+
+.contenedor-imagen-artista{
+	max-height: 205px;
+	max-width: 205px;
+}
+
+
+.obra{
+	max-width: 146px;
+	max-height: 146px;
+}
+
+.obragrande{
+	max-width: 518px;
+}
+
+.imagen-artista{
+	max-width: 300px;
+	
+	margin: 0 auto;
 }

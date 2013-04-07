@@ -35,7 +35,7 @@
 
 					<div class="row colaborador">
 						<div class="five columns">
-							<img src="<?= base_url() ?>images/colaboradores/<?= $colaborador["logo"] ?>">
+							<img class="colaborador-logo" src="<?= base_url() ?>images/colaboradores/<?= $colaborador["logo"] ?>">
 						</div>
 						<div class="seven columns">
 							<h3><?= $colaborador["nombre"] ?></h3>

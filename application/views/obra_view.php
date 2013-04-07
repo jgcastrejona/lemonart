@@ -27,11 +27,14 @@
 		$this->load->view("header");
 		?>
 		<div class="row contenedor">
-			<div class="twelve columns">
-				<img src="<?= base_url() ?>images/obras<?= $obra[0]["imagen"] ?>">
-				<br>
+			<div class="seven columns">
+				<div class="obra-grande">
+					<img src="<?= base_url() ?>images/obras/<?= $obra[0]["imagen"] ?>">
+				</div>
+			</div>
+			<div class="five columns">
 				<h3><?= $obra[0]["titulo"] ?></h3>
-				<h4><a href="<?= base_url() ?>artistas/perfil/<?= $artista[0]["id_artista"] ?>"><?= $artista[0]["nombre"] ?></a> | Material</h4>
+				<h4><a href="<?= base_url() ?>artistas/perfil/<?= $artista[0]["id_artista"] ?>"><?= $artista[0]["nombre"] ?></a></h4>
 				<?= $obra[0]["descripcion"] ?>
 			</div>
 		</div>

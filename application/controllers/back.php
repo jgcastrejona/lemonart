@@ -76,6 +76,9 @@ class Back extends CI_Controller {
 
 			$crud = new grocery_CRUD();
 
+			$this->load->config('grocery_crud');
+			$this->config->set_item('grocery_crud_file_upload_allow_file_types', 'gif|jpeg|jpg|png');
+
 			$crud->set_table('artista')
 					->set_subject('Artista')
 					->columns('nombre', "imagen", 'biografia')
@@ -88,10 +91,10 @@ class Back extends CI_Controller {
 			$crud->required_fields('nombre', 'biografia');
 			$crud->set_field_upload('imagen', 'images/artistas');
 
+			$crud->callback_after_upload(array($this, 'artistas_callback'));
+
 
 			$output = $crud->render();
-
-			//$this->_example_output($output);
 
 			$this->load->view("grid_view", $output);
 		}
@@ -100,39 +103,57 @@ class Back extends CI_Controller {
 			redirect("back/index");
 	}
 
+	function artistas_callback($uploader_response, $field_info, $files_to_upload) {
+		$this->load->library('image_moo');
+
+		$file_uploaded = $field_info->upload_path . '/' . $uploader_response[0]->name;
+		$this->image_moo->load($file_uploaded)->resize_crop(205, 205)->save($file_uploaded, true);
+
+		return true;
+	}
+
 	public function obras() {
 		if ($this->isValidated()) {
 
 			$crud = new grocery_CRUD();
 
+			$this->load->config('grocery_crud');
+			$this->config->set_item('grocery_crud_file_upload_allow_file_types', 'gif|jpeg|jpg|png');
+
 			$crud->set_table('obra')
 					->set_subject('Obra')
-					->columns('titulo', "descripcion", 'imagen', "id_artista", "miniatura", "en_venta", "precio")
+					->columns('titulo', "descripcion", 'imagen', "id_artista", "en_venta", "precio")
 					->display_as('nombre', 'Nombre')
 					->display_as('descripcion', 'Descripción de la obra')
 					->display_as("imagen", "Imagen")
 					->display_as("id_artista", "Artista")
-					->display_as('miniatura', 'Imagen en miniatura')
 					->display_as("en_venta", "En venta")
 					->display_as("precio", "Precio");
 
 			$crud->set_relation("id_artista", "artista", "nombre");
-
-			//$crud->fields('titulo', "descripcion", 'imagen',"id_Artista","miniatura","en_venta","precio");
-			$crud->required_fields('titulo', "descripcion", 'imagen', "id_artista", "miniatura", "en_venta", "precio");
-			$crud->set_field_upload('imagen', 'images/obras/miniatura');
-			$crud->set_field_upload('miniatura', 'images/obras');
-
+			//$crud->fields('titulo', "descripcion", 'imagen',"id_Artista","en_venta","precio");
+			$crud->required_fields('titulo', "descripcion", 'imagen', "id_artista", "en_venta", "precio");
+			$crud->set_field_upload('imagen', 'images/obras');
+			$crud->callback_after_upload(array($this, 'obras_callback'));
 
 			$output = $crud->render();
-
-			//$this->_example_output($output);
 
 			$this->load->view("grid_view", $output);
 		}
 
 		else
 			redirect("back/index");
+	}
+
+	function obras_callback($uploader_response, $field_info, $files_to_upload) {
+		$this->load->library('image_moo');
+
+		$file_uploaded = $field_info->upload_path . '/' . $uploader_response[0]->name;
+		$file_uploaded2 = $field_info->upload_path . '/miniatura/' . $uploader_response[0]->name;
+		$this->image_moo->load($file_uploaded)->resize_crop(518, 518)->save($file_uploaded, true);
+		$this->image_moo->load($file_uploaded)->resize_crop(146, 146)->save($file_uploaded2, true);
+
+		return true;
 	}
 
 	public function colaboradores() {
@@ -152,6 +173,7 @@ class Back extends CI_Controller {
 			$crud->required_fields('nombre', 'logo', "descripcion");
 			$crud->set_field_upload('logo', 'images/colaboradores');
 
+			
 
 			$output = $crud->render();
 
@@ -218,10 +240,10 @@ class Back extends CI_Controller {
 
 			$crud->set_table('nosotros')
 					->set_subject('Nosotros')
-					->columns('nombre','descripcion');
-			
+					->columns('nombre', 'descripcion');
+
 			$crud->edit_fields('descripcion');
-			
+
 			$crud->unset_add();
 			$crud->unset_delete();
 
@@ -234,8 +256,8 @@ class Back extends CI_Controller {
 		else
 			redirect("back/index");
 	}
-	
-	public function integrantes(){
+
+	public function integrantes() {
 		if ($this->isValidated()) {
 
 			$crud = new grocery_CRUD();
