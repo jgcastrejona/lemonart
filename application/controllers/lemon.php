@@ -6,7 +6,9 @@ if (!defined('BASEPATH'))
 class Lemon extends CI_Controller {
 
 	public function index() {
-		$this->load->view('home');
+		$this->load->model("inicio_model");
+		$data["slides"] =  $this->inicio_model->get_slides();
+		$this->load->view('home',$data);
 	}
 
 }

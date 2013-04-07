@@ -38,165 +38,190 @@
 				<div class="twelve columns">
 					<h3>Novedades</h3>
 					<div id="featured">
-						<img src="<?= base_url() ?>images/slide1.png" alt="slide image">
-						<img src="<?= base_url() ?>images/slide2.png" alt="slide image">
-						<img src="<?= base_url() ?>images/slide3.png" alt="slide image">
-					</div>
-				</div>
-			</div>
-		</section>
+						<?php
+						$cont = 1;
+						foreach ($slides as $slide) {
+							?>
+							<div data-caption="#caption<?= $cont ?>">
+								<a href="<?= $slide["enlace"] ?>">
+									<img src="<?= base_url() ?>images/slide/<?= $slide["imagen"] ?>" alt="slide image">
+								</a>
+							</div>
 
-		<section>
+							<?php
+							$cont++;
+						}
+						?>
+					</div>
+
+					<?php
+					$cont = 1;
+					foreach ($slides as $slide) {
+						?>
+						<div class="orbit-caption" id="caption<?= $cont ?>"><?= $slide["titulo"] ?></div>
+
+						<?php
+						$cont++;
+					}
+					?>	
+				</div>
+
+			</div>
+		</div>
+	</div>
+</section>
+
+<section>
+	<div class="row">
+		<div class="twelve columns">
+			<h3>Artistas</h3>
+
 			<div class="row">
 				<div class="twelve columns">
-					<h3>Artistas</h3>
-
-					<div class="row">
-						<div class="twelve columns">
-							<div>
-								<p>Descripcion o comentario sobre los artistas mas representativos</p>
-							</div>
-						</div>
-					</div>
-
-					<div class="row">
-						<div class="three columns">
-							<div class="">
-								<a><img src="<?= base_url() ?>images/artista.gif"></a>
-							</div>
-						</div>
-						<div class="three columns">
-							<div class="">
-								<a><img src="<?= base_url() ?>images/artista.gif"></a>
-							</div>
-						</div>
-						<div class="three columns">
-							<div class="">
-								<a><img src="<?= base_url() ?>images/artista.gif"></a>
-							</div>
-						</div>
-						<div class="three columns">
-							<div class="">
-								<a><img src="<?= base_url() ?>images/artista.gif"></a>
-							</div>
-						</div>
-					</div>
-
-					<div class="row">
-						<div class="twelve columns derecha margentop">
-							<a class="small button ">Artistas</a>
-						</div>
+					<div>
+						<p>Descripcion o comentario sobre los artistas mas representativos</p>
 					</div>
 				</div>
 			</div>
 
 			<div class="row">
-				<div class="twelve columns">
-					<h3>Eventos</h3>
-
-					<div class="row">
-						<div class="twelve columns">
-							<div>
-								<p>Descripcion o comentario sobre los eventos mas representativos</p>
-							</div>
-						</div>
+				<div class="three columns">
+					<div class="">
+						<a><img src="<?= base_url() ?>images/artista.gif"></a>
 					</div>
-
-					<div class="row">
-						<div class="three columns">
-							<div class="">
-								<a><img src="<?= base_url() ?>images/evento.gif"></a>
-							</div>
-						</div>
-						<div class="three columns">
-							<div class="">
-								<a><img src="<?= base_url() ?>images/evento.gif"></a>
-							</div>
-						</div>
-						<div class="three columns">
-							<div class="">
-								<a><img src="<?= base_url() ?>images/evento.gif"></a>
-							</div>
-						</div>
-						<div class="three columns">
-							<div class="">
-								<a><img src="<?= base_url() ?>images/evento.gif"></a>
-							</div>
-						</div>						
-
+				</div>
+				<div class="three columns">
+					<div class="">
+						<a><img src="<?= base_url() ?>images/artista.gif"></a>
 					</div>
-
-					<div class="row">
-						<div class="twelve columns derecha margentop">
-							<a class="small button ">Eventos</a>
-						</div>
+				</div>
+				<div class="three columns">
+					<div class="">
+						<a><img src="<?= base_url() ?>images/artista.gif"></a>
+					</div>
+				</div>
+				<div class="three columns">
+					<div class="">
+						<a><img src="<?= base_url() ?>images/artista.gif"></a>
 					</div>
 				</div>
 			</div>
 
 			<div class="row">
+				<div class="twelve columns derecha margentop">
+					<a class="small button ">Artistas</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="twelve columns">
+			<h3>Eventos</h3>
+
+			<div class="row">
 				<div class="twelve columns">
-					<h3>Colaboradores</h3>
-
-					<div class="row">
-						<div class="twelve columns">
-							<div>
-								<p>Descripcion o comentario sobre los colaboradores mas representativos</p>
-							</div>
-						</div>
-					</div>
-
-					<div class="row">
-						<div class="three columns">
-							<div class="">
-								<a><img src="<?= base_url() ?>images/colaborador.gif"></a>
-							</div>
-						</div>
-						<div class="three columns">
-							<div class="">
-								<a><img src="<?= base_url() ?>images/colaborador.gif"></a>
-							</div>
-						</div>
-						<div class="three columns">
-							<div class="">
-								<a><img src="<?= base_url() ?>images/colaborador.gif"></a>
-							</div>
-						</div>
-						<div class="three columns">
-							<div class="">
-								<a><img src="<?= base_url() ?>images/colaborador.gif"></a>
-							</div>
-						</div>						
-
-					</div>
-
-					<div class="row">
-						<div class="twelve columns derecha margentop">
-							<a class="small button ">Colaboradores</a>
-						</div>
+					<div>
+						<p>Descripcion o comentario sobre los eventos mas representativos</p>
 					</div>
 				</div>
 			</div>
-		</section>
 
-		<?php
-		$this->load->view("footer");
-		?>
+			<div class="row">
+				<div class="three columns">
+					<div class="">
+						<a><img src="<?= base_url() ?>images/evento.gif"></a>
+					</div>
+				</div>
+				<div class="three columns">
+					<div class="">
+						<a><img src="<?= base_url() ?>images/evento.gif"></a>
+					</div>
+				</div>
+				<div class="three columns">
+					<div class="">
+						<a><img src="<?= base_url() ?>images/evento.gif"></a>
+					</div>
+				</div>
+				<div class="three columns">
+					<div class="">
+						<a><img src="<?= base_url() ?>images/evento.gif"></a>
+					</div>
+				</div>						
 
-		<!-- Included JS Files (Compressed) -->
-		<script src="javascripts/jquery.js"></script>
-		<script src="javascripts/foundation.min.js"></script>
+			</div>
 
-		<!-- Initialize JS Plugins -->
-		<script src="javascripts/app.js"></script>
-                <script src="javascripts/main.js"></script>
+			<div class="row">
+				<div class="twelve columns derecha margentop">
+					<a class="small button ">Eventos</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="twelve columns">
+			<h3>Colaboradores</h3>
+
+			<div class="row">
+				<div class="twelve columns">
+					<div>
+						<p>Descripcion o comentario sobre los colaboradores mas representativos</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="three columns">
+					<div class="">
+						<a><img src="<?= base_url() ?>images/colaborador.gif"></a>
+					</div>
+				</div>
+				<div class="three columns">
+					<div class="">
+						<a><img src="<?= base_url() ?>images/colaborador.gif"></a>
+					</div>
+				</div>
+				<div class="three columns">
+					<div class="">
+						<a><img src="<?= base_url() ?>images/colaborador.gif"></a>
+					</div>
+				</div>
+				<div class="three columns">
+					<div class="">
+						<a><img src="<?= base_url() ?>images/colaborador.gif"></a>
+					</div>
+				</div>						
+
+			</div>
+
+			<div class="row">
+				<div class="twelve columns derecha margentop">
+					<a class="small button ">Colaboradores</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<?php
+$this->load->view("footer");
+?>
+
+<!-- Included JS Files (Compressed) -->
+<script src="javascripts/jquery.js"></script>
+<script src="javascripts/foundation.min.js"></script>
+
+<!-- Initialize JS Plugins -->
+<script src="javascripts/app.js"></script>
+<script src="javascripts/main.js"></script>
 
 
-		<script>
-			$(window).load(function(){
-				$("#featured").orbit();
-			});
-		</script> 
+<script>
+	$(window).load(function(){
+		$("#featured").orbit();
+	});
+</script> 
 
-	</body>
+</body>
 </html>

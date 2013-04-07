@@ -34,35 +34,37 @@
 		<?php
 		$this->load->view("header");
 		?>
-		
+
 		<?php
 		//phpinfo();
 		?>
         <div class="contenedor">
 			<div class="row">
 				<dl class="tabs">
-					<dd><a href="#inicio">Inicio</a></dd>
-					<dd class="active"><a href="#artistas">Artistas</a></dd>
+					<dd class="active"><a href="#inicio">Inicio</a></dd>
+					<dd><a href="#artistas">Artistas</a></dd>
 					<dd><a href="#obras">Obras</a></dd>
-					<dd><a href="#colaboradores">Colaboradores</a></dd>
 					<dd><a href="#eventos">Eventos</a></dd>
+					<dd><a href="#colaboradores">Colaboradores</a></dd>
 					<dd><a href="#blog">Blog</a></dd>
 					<dd><a href="#nosotros">Nosotros</a></dd>
 				</dl>
 			</div>
 			<ul class="tabs-content">
-				<li id="inicioTab">
+
+				<li class="active" id="inicioTab">
 					<div>
-						Inicio
+						<h2>Inicio</h2>
+						<IFRAME id="inicioframe" class="framegc" src="<?php echo base_url('back/inicio'); ?>" class="twelve" ></IFRAME>
 					</div>
 				</li>
 
-				<li class="active" id="artistasTab">
+				<li id="artistasTab">
 					<div>
 						<h2>Artistas</h2>
 						<h3>Aqui puedes agregar y modificar a los artistas</h3>
 						<h5>Se recomienda que las imagenes sean del mismo tamaño entre ellas.</h5>
-						<IFRAME SRC="<?php echo base_url('back/artistas'); ?>" Height=650 class="twelve" ></IFRAME>
+						<IFRAME id="artistasframe" class="framegc" src="<?php echo base_url('back/artistas'); ?>" class="twelve" ></IFRAME>
 					</div>
 				</li>
 
@@ -71,15 +73,7 @@
 						<h2>Obras</h2>
 						<h3>Aqui puedes agregar y modificar a los obras</h3>
 						<h5>Se recomienda que las imagenes de los obras sean del mismo tamaño entre ellas.</h5>
-						<IFRAME SRC="<?php echo base_url('back/obras'); ?>" Height=650 class="twelve"></IFRAME>
-					</div>
-				</li>
-				<li id="colaboradoresTab">
-					<div>
-						<h2>Colaboradores</h2>
-						<h3>Aqui puedes agregar y modificar los colaboradores</h3>
-						<h5>Se recomienda que las imagenes sean del mismo tamaño entre ellas.</h5>
-						<IFRAME SRC="<?php echo base_url('back/colaboradores'); ?>" Height=650 class="twelve"></IFRAME>
+						<IFRAME id="obrasframe" class="framegc" src="<?php echo base_url('back/obras'); ?>" Height=650 class="twelve"></IFRAME>
 					</div>
 				</li>
 				<li id="eventosTab">
@@ -87,7 +81,15 @@
 						<h2>Eventos</h2>
 						<h3>Aqui puedes agregar y modificar los eventos</h3>
 						<h5>Se recomienda que las imagenes sean del mismo tamaño entre ellas.</h5>
-						<IFRAME SRC="<?php echo base_url('back/eventos'); ?>" Height=650 class="twelve"></IFRAME>
+						<IFRAME id="eventosframe" class="framegc" src="<?php echo base_url('back/eventos'); ?>" Height=650 class="twelve"></IFRAME>
+					</div>
+				</li>
+				<li id="colaboradoresTab">
+					<div>
+						<h2>Colaboradores</h2>
+						<h3>Aqui puedes agregar y modificar los colaboradores</h3>
+						<h5>Se recomienda que las imagenes sean del mismo tamaño entre ellas.</h5>
+						<IFRAME id="colaboradoresframe" class="framegc" SRC="<?php echo base_url('back/colaboradores'); ?>" Height=650 class="twelve"></IFRAME>
 					</div>
 				</li>
 				<li id="blogTab">
@@ -95,15 +97,15 @@
 						<h2>Blog</h2>
 						<h3>Aqui puedes agregar y modificar los blog</h3>
 						<h5>Se recomienda que las imagenes sean del mismo tamaño entre ellas.</h5>
-						<IFRAME SRC="<?php echo base_url('back/blog'); ?>" Height=650 class="twelve"></IFRAME>
+						<IFRAME id="blogframe" class="framegc" SRC="<?php echo base_url('back/blog'); ?>" Height=650 class="twelve"></IFRAME>
 					</div>
 				</li>
 				<li id="nosotrosTab">
 					<div>
 						<h2>Nosotros</h2>
 						<h3>Informacion sobre lemon art</h3>
-						<IFRAME SRC="<?php echo base_url('back/nosotros'); ?>" Height=250 class="twelve"></IFRAME>
-						<IFRAME SRC="<?php echo base_url('back/integrantes'); ?>" Height=650 class="twelve"></IFRAME>
+						<IFRAME id="nosotrosframe" class="framegc" SRC="<?php echo base_url('back/nosotros'); ?>" Height=250 class="twelve"></IFRAME>
+						<IFRAME id="lemonframe" class="framegc" SRC="<?php echo base_url('back/integrantes'); ?>" Height=650 class="twelve"></IFRAME>
 					</div>
 				</li>
 			</ul>
@@ -119,5 +121,14 @@
 	<!-- Initialize JS Plugins -->
 	<script src="<?= base_url() ?>javascripts/app.js"></script>
 	<script src="<?= base_url() ?>javascripts/main.js"></script>
+	<script>
+		$(document).ready(function(){
+			$('#inicioframe,#artistasframe,#obrasframe,#eventosframe,#colaboradoresframe,#blogframe,#nosotrosframe,#lemonframe').load(function() {
+				this.style.height = this.contentWindow.document.body.offsetHeight + 'px';
+				this.style.width = "960px"
+				
+			});
+		})
+	</script>
 </body>
 </html>

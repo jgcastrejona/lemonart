@@ -13,7 +13,7 @@
 class colaborador_model extends CI_Model {
 
 	//put your code here
-
+	
 	public function contar_colaboradores() {
 		return $this->db->count_all('colaborador');
 	}

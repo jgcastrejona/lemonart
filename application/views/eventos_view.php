@@ -31,46 +31,45 @@
 		$this->load->view("header");
 		?>
         <div class="row contenedor">
-            <div class="two columns">
-                <div class="row">
-                    <br>    
-                    <ul class="nav-bar vertical">
-						<?php
-						for ($i = 0; $i < count($añosus); $i++) {
-							?>
-							<li class="has-flyout">
-								<a href="#"><?= $añosus[$i] ?></a>
-								<a href="#" class="flyout-toggle"><span> </span></a>
-								<ul class="flyout">
-									<?php
-									for ($j = 0; $j < count($eventos[$i]); $j++) {
-										?>
-										<li>
-											<a href="<?= base_url() ?>eventos/evento/<?= $eventos[$i][$j]['id_evento'] ?>" >
-												<?= $eventos[$i][$j]['nombre'] ?>
-											</a>
-										</li>
-										<?php
-									}
-									?>
-								</ul>
-							</li>
+			<div class="twelve columns">
+				<div class="row">
+					<div class="two columns">
+						<br>    
+						<ul class="nav-bar vertical">
 							<?php
-						}
-						?>
-					</ul>
+							for ($i = 0; $i < count($añosus); $i++) {
+								?>
+								<li class="has-flyout">
+									<a href="#"><?= $añosus[$i] ?></a>
+									<a href="#" class="flyout-toggle"><span> </span></a>
+									<ul class="flyout">
+										<?php
+										for ($j = 0; $j < count($eventos[$i]); $j++) {
+											?>
+											<li>
+												<a href="<?= base_url() ?>eventos/evento/<?= $eventos[$i][$j]['id_evento'] ?>" >
+													<?= $eventos[$i][$j]['nombre'] ?>
+												</a>
+											</li>
+											<?php
+										}
+										?>
+									</ul>
+								</li>
+								<?php
+							}
+							?>
+						</ul>
+					</div>
+
+					<div class="nine columns offset-by-one">
+						<h2><?= $evento[0]["nombre"] ?></h2>
+						<h5><?= $evento[0]["lugar"] ?></h5>
+						<?= $evento[0]["descripcion"] ?>
+					</div>
+
 				</div>
 			</div>
-
-			<div class="nine columns offset-by-one">
-				<h2><?= $evento[0]["nombre"] ?></h2>
-				<?= $evento[0]["descripcion"] ?>
-
-
-
-
-			</div>
-
 		</div>
 
 		<?php

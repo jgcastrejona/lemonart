@@ -46,6 +46,10 @@ footer{
     font-size: 2em;
 }
 
+iframe{
+	margin: 0 auto;
+}
+
 /* -----------------------------------------
   Eventos
 ----------------------------------------- */
@@ -147,3 +151,4 @@ img .colaborador-logo{
 	
 	margin: 0 auto;
 }
+
