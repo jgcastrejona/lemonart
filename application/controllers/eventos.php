@@ -6,6 +6,9 @@ if (!defined('BASEPATH'))
 class Eventos extends CI_Controller {
 
 	public function index() {
+		$this->load->model("inicio_model");
+		$data["logo"]["logo"] = $this->inicio_model->getlogo();
+
 		$this->load->model("evento_model");
 		$data["años"] = $this->evento_model->obtener_anios();
 		$cont = 0;
@@ -18,13 +21,16 @@ class Eventos extends CI_Controller {
 				$cont++;
 			}
 		}
-		
+
 		$data["evento"] = $this->evento_model->obtenerultimoevento();
- 
+
 		$this->load->view('eventos_view', $data);
 	}
 
 	public function evento($id) {
+		$this->load->model("inicio_model");
+		$data["logo"]["logo"] = $this->inicio_model->getlogo();
+
 		$this->load->model("evento_model");
 		$data["años"] = $this->evento_model->obtener_anios();
 		$cont = 0;

@@ -33,7 +33,7 @@
 			<div class="row">
 				<dl class="tabs">
 					<dd class="active"><a href="#inicio">Inicio</a></dd>
-					<dd><a href="#destacados">Destadados</a></dd> 
+					<dd><a href="#destacados">Destacados</a></dd> 
 					<dd><a href="#artistas">Artistas</a></dd>
 					<dd><a href="#obras">Obras</a></dd>
 					<dd><a href="#eventos">Eventos</a></dd>

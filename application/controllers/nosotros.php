@@ -6,6 +6,9 @@ if (!defined('BASEPATH'))
 class Nosotros extends CI_Controller {
 
 	public function index() {
+		$this->load->model("inicio_model");
+		$data["logo"]["logo"] = $this->inicio_model->getlogo();
+		
 		$this->load->model("nosotros_model");
 		$data["usuarios"] = $this->nosotros_model->obtener_usuarios();
 		$data["panel"] = $this->nosotros_model->que();
@@ -13,6 +16,9 @@ class Nosotros extends CI_Controller {
 	}
 
 	public function integrante() {
+		$this->load->model("inicio_model");
+		$data["logo"]["logo"] = $this->inicio_model->getlogo();
+		
 		$this->load->model("nosotros_model");
 		$data["usuarios"] = $this->nosotros_model->obtener_usuarios();
 
@@ -22,6 +28,9 @@ class Nosotros extends CI_Controller {
 	}
 
 	public function que() {
+		$this->load->model("inicio_model");
+		$data["logo"]["logo"] = $this->inicio_model->getlogo();
+		
 		$this->load->model("nosotros_model");
 		$data["usuarios"] = $this->nosotros_model->obtener_usuarios();
 		$data["panel"] = $this->nosotros_model->que();
@@ -29,6 +38,9 @@ class Nosotros extends CI_Controller {
 	}
 
 	public function mision() {
+		$this->load->model("inicio_model");
+		$data["logo"]["logo"] = $this->inicio_model->getlogo();
+		
 		$this->load->model("nosotros_model");
 		$data["usuarios"] = $this->nosotros_model->obtener_usuarios();
 		$data["panel"] = $this->nosotros_model->mision();
@@ -36,6 +48,9 @@ class Nosotros extends CI_Controller {
 	}
 
 	public function vision() {
+		$this->load->model("inicio_model");
+		$data["logo"]["logo"] = $this->inicio_model->getlogo();
+		
 		$this->load->model("nosotros_model");
 		$data["usuarios"] = $this->nosotros_model->obtener_usuarios();
 		$data["panel"] = $this->nosotros_model->vision();

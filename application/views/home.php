@@ -24,7 +24,7 @@
 	</head>
 	<body>
 		<?php
-		$this->load->view("header",$logo);
+		$this->load->view("header", $logo);
 		?>
 		<section>
 			<div class="row">
@@ -79,11 +79,17 @@
 			<div class="row">
 				<div class="twelve columns">
 					<div>
-						<p>Descripcion o comentario sobre los artistas mas representativos</p>
+						<p><?= $artistasd[0]["texto"] ?></p>
 					</div>
 				</div>
 			</div>
 
+
+			<?=
+			var_dump($artistasdestacados);
+			var_dump($eventosdestacados); //"] = $this->inicio_model->destacadoseventos();
+			var_dump($colaboradoresdestacados);
+			?>
 			<div class="row">
 				<div class="three columns">
 					<div class="">
@@ -109,7 +115,7 @@
 
 			<div class="row">
 				<div class="twelve columns derecha margentop">
-					<a class="small button ">Artistas</a>
+					<a class="small button " href="<?= base_url() ?>artistas">Ver Artistas</a>
 				</div>
 			</div>
 		</div>
@@ -122,7 +128,7 @@
 			<div class="row">
 				<div class="twelve columns">
 					<div>
-						<p>Descripcion o comentario sobre los eventos mas representativos</p>
+						<p><?= $eventosd[0]["texto"] ?></p>
 					</div>
 				</div>
 			</div>
@@ -153,7 +159,7 @@
 
 			<div class="row">
 				<div class="twelve columns derecha margentop">
-					<a class="small button ">Eventos</a>
+					<a class="small button " href="<?= base_url() ?>eventos">Ver Eventos</a>
 				</div>
 			</div>
 		</div>
@@ -166,7 +172,7 @@
 			<div class="row">
 				<div class="twelve columns">
 					<div>
-						<p>Descripcion o comentario sobre los colaboradores mas representativos</p>
+						<p><?= $colaboradoresd[0]["texto"] ?></p>
 					</div>
 				</div>
 			</div>
@@ -197,7 +203,7 @@
 
 			<div class="row">
 				<div class="twelve columns derecha margentop">
-					<a class="small button ">Colaboradores</a>
+					<a class="small button " href="<?= base_url() ?>colaboradores">Ver Colaboradores</a>
 				</div>
 			</div>
 		</div>

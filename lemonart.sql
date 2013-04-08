@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 22-03-2013 a las 20:21:12
+-- Tiempo de generación: 08-04-2013 a las 04:31:15
 -- Versión del servidor: 5.5.24-log
 -- Versión de PHP: 5.4.3
 
@@ -30,7 +30,7 @@ CREATE TABLE IF NOT EXISTS `anio` (
   `id_anio` int(11) NOT NULL AUTO_INCREMENT,
   `anio` int(11) NOT NULL,
   PRIMARY KEY (`id_anio`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=7 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=13 ;
 
 --
 -- Volcado de datos para la tabla `anio`
@@ -42,7 +42,11 @@ INSERT INTO `anio` (`id_anio`, `anio`) VALUES
 (3, 2011),
 (4, 2010),
 (5, 2009),
-(6, 2008);
+(6, 2008),
+(9, 2014),
+(10, 2015),
+(11, 2016),
+(12, 2017);
 
 -- --------------------------------------------------------
 
@@ -56,32 +60,48 @@ CREATE TABLE IF NOT EXISTS `artista` (
   `imagen` varchar(255) NOT NULL,
   `biografia` text NOT NULL,
   PRIMARY KEY (`id_artista`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=20 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=15 ;
 
 --
 -- Volcado de datos para la tabla `artista`
 --
 
 INSERT INTO `artista` (`id_artista`, `nombre`, `imagen`, `biografia`) VALUES
-(1, 'kjfklñajf', 'e078c-tumblr_m3h296LQ0v1rnye49o1_1280.jpg', '<p>\r\n	kjhdksad</p>\r\n<p>\r\n	imgen</p>\r\n'),
-(2, 'lajdl', 'ae048-tumblr_mgdwixOZAv1rzirmio1_1280.jpg', '<p>\r\n	ldkjlakflkjfljlf</p>\r\n'),
-(3, 'kajkljdkljasd', '11f7a-artista.gif', '<p>\r\n	lasdklajdlkjadkllakd</p>\r\n'),
-(4, 'kasjdlkjasldkj', '', 'akjlkajklas'),
-(5, 'lkadkljadlk', '', 'lkjlkjfklsfklslfkslkfjlsdkfjlk'),
-(6, 'opipoqipeol,monjolkncklnñljcnñaksjfncioñrf', '', 'ñalknjcñiofurpfiocnña'),
-(7, 'knñldurfio', '', '{ñloñdfolvnuidñaolfio'),
-(8, 'artista.gif', '', 'artista.gifartista.gifartista.gifartista.gif'),
-(9, ',.mckjasdfvkl', '', 'ñaolsivmñopasuidfñcmop'),
-(10, 'ñsdlvn sdifuj', '', 'ñdiksflñsdnufoñsuoeriut'),
-(11, 'ñjhasdñfklañ', '', '.-x,mvñlasdif{ñ'),
-(12, 'ñldvmfñsdolñ', '', ''),
-(13, 'ñlasdmfñildu', '', 'jhdfkjdf'),
-(14, 'lsdfkjg', '', 'lkandklñf'),
-(15, 'lksdhjflñs', '', 'ñsakldnjfcñklsnjdf'),
-(16, 'jhclfnkjl', '', 'lksjcnlsdfj'),
-(17, 'lkjcnfñldj', '', 'ñzlsduiknvrioñ'),
-(18, 'Daniel Torres', '', '<p>\r\n	LOLOLOLOL</p>\r\n'),
-(19, 'qwe', '', '<p>\r\n	qweqweqwe</p>\r\n');
+(1, 'demo artist', '0b1d2-pokecatsmaingif.gif', '<p>\r\n	kjhdksad</p>\r\n<p>\r\n	imgen</p>\r\n'),
+(2, 'lajdl', '740c2-fat-boy.gif', '<p>\r\n	ldkjlakflkjfljlf</p>\r\n'),
+(3, 'kajkljdkljasd', '5b9c2-camara---copia.jpg', '<p>\r\n	lasdklajdlkjadkllakd</p>\r\n'),
+(4, 'kasjdlkjasldkj', '7d729-tumblr_mg0dcj0nkG1qdvls7o2_400.jpg', '<p>\r\n	akjlkajklas</p>\r\n'),
+(5, 'lkadkljadlk', 'aa8cf-pikachu__fighting_for_nazis_by_dogman93-d33sjiy.jpg', '<p>\r\n	lkjlkjfklsfklslfkslkfjlsdkfjlk</p>\r\n'),
+(6, 'opipoqipeol,mo', 'bdcb9-c3e3d0c8739a11e1a87612313804ec91_7.jpg', '<p>\r\n	&ntilde;alknjc&ntilde;iofurpfiocn&ntilde;a</p>\r\n'),
+(7, 'knñldurfio', '6bb4f-891f6ba45ce811e2948222000a1f9307_7.jpg', '<p>\r\n	{&ntilde;lo&ntilde;dfolvnuid&ntilde;aolfio</p>\r\n'),
+(8, 'artista.gif', 'b3714-e832324656eb11e2a1bd22000a9f1361_7.jpg', '<p>\r\n	artista.gifartista.gifartista.gifartista.gif</p>\r\n'),
+(10, 'ñsdlvn sdifuj', '5824b-smokearmy.jpg', '<p>\r\n	&ntilde;diksfl&ntilde;sdnufo&ntilde;suoeriut</p>\r\n'),
+(11, 'ñjhasdñfklañ', 'be526-tumblr_m3ar191WAk1qzw1qyo1_500.gif', '<p>\r\n	.-x,mv&ntilde;lasdif{&ntilde;</p>\r\n'),
+(12, 'ñldvmfñsdolñ', 'acd26-16082012153.jpg', '<p>\r\n	Trololol beto</p>\r\n'),
+(14, 'lsdfkjg', '33af7-bdcb9-c3e3d0c8739a11e1a87612313804ec91_7.jpg', '<p>\r\n	lkandkl&ntilde;f</p>\r\n');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `artistasdestacados`
+--
+
+CREATE TABLE IF NOT EXISTS `artistasdestacados` (
+  `id_destacado` int(11) NOT NULL AUTO_INCREMENT,
+  `id_artista` int(11) NOT NULL,
+  PRIMARY KEY (`id_destacado`),
+  KEY `id_artista` (`id_artista`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=6 ;
+
+--
+-- Volcado de datos para la tabla `artistasdestacados`
+--
+
+INSERT INTO `artistasdestacados` (`id_destacado`, `id_artista`) VALUES
+(4, 6),
+(2, 8),
+(5, 8),
+(1, 10);
 
 -- --------------------------------------------------------
 
@@ -93,29 +113,18 @@ CREATE TABLE IF NOT EXISTS `blog` (
   `id_entrada` int(11) NOT NULL AUTO_INCREMENT,
   `titulo` varchar(500) NOT NULL,
   `texto` text NOT NULL,
-  `resumen` text NOT NULL,
-  `imagen` varchar(255) NOT NULL,
   `fecha` date NOT NULL,
   PRIMARY KEY (`id_entrada`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=13 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=16 ;
 
 --
 -- Volcado de datos para la tabla `blog`
 --
 
-INSERT INTO `blog` (`id_entrada`, `titulo`, `texto`, `resumen`, `imagen`, `fecha`) VALUES
-(1, 'Titulo 1', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas aliquam semper congue. Praesent sapien ante, faucibus eu pretium vel, interdum ut massa. Ut dignissim pulvinar elit. Integer at libero sit amet libero porta tincidunt. Proin semper, urna ullamcorper vestibulum placerat, ligula risus elementum velit, sed laoreet purus dui quis velit. Donec vel velit eget lectus rutrum pellentesque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam gravida ullamcorper augue vel rutrum. Maecenas cursus eros eu sapien ornare ut aliquet tellus aliquet. Aliquam sit amet mauris at nibh placerat tempus. Sed in libero tellus, in sagittis tellus. Proin non interdum odio. Phasellus sit amet viverra ipsum. Morbi mauris lectus, interdum nec ullamcorper vitae, eleifend vel lorem. Curabitur eget nunc enim, vel pulvinar est. Aenean viverra, nulla nec eleifend cursus, nisi sem malesuada eros, et posuere justo magna vitae leo. Nulla a sollicitudin ligula. Suspendisse ac dolor diam. Aenean interdum justo sed lacus convallis quis venenatis turpis porttitor. In felis neque, bibendum ut venenatis sed, pulvinar quis massa. Donec luctus mi a justo condimentum consectetur. Morbi eget nunc ut diam dapibus porta. Nunc lectus nibh, faucibus ac rutrum non, volutpat in lacus. Ut varius semper lorem sit amet porta. Etiam eget metus lacus. Nulla facilisi. Cras nec nisi leo, in porttitor turpis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam dictum tortor vel elit laoreet ultrices. Donec placerat interdum sapien et placerat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aliquam dignissim tempor quam, ac aliquam lacus imperdiet at. Etiam ullamcorper diam et ante elementum eget sodales orci aliquet. Vivamus aliquet nibh eleifend turpis malesuada vehicula. Sed libero elit, aliquet nec varius vel, egestas vitae justo. Vivamus consectetur tincidunt placerat. Pellentesque eu sem at ante fermentum porta. Vivamus dignissim ipsum eget erat eleifend scelerisque ac ut lacus.', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas aliquam semper congue. Praesent sapien ante, faucibus eu pretium vel, interdum ut massa. Ut dignissim pulvinar elit. Integer at libero sit amet libero porta tincidunt. Proin semper, urna ullamcorper vestibulum placerat, ligula risus elementum velit, sed laoreet purus dui quis velit. Donec vel velit eget lectus rutrum pellentesque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam gravida ullamcorper augue vel rutrum. Maecenas cursus eros eu sapien ornare ut aliquet tellus aliquet. Aliquam sit amet mauris at nibh placerat tempus. Sed in libero tellus, in sagittis tellus. Proin non interdum odio. Phasellus sit amet viverra ipsum. Morbi mauris lectus, interdum nec ullamcorper vitae, eleifend vel lorem. Curabitur eget nunc enim, vel pulvinar est. Aenean viverra, nulla nec eleifend cursus, nisi sem malesuada eros, et posuere justo magna vitae leo. Nulla a sollicitudin ligula. Suspendisse ac dolor diam. Aenean interdum justo sed lacus convallis quis venenatis turpis porttitor. In felis neque, bibendum ut venenatis sed, pulvinar quis massa. Donec luctus mi a justo condimentum consectetur. Morbi eget nunc ut diam dapibus porta. Nunc lectus nibh, faucibus ac rutrum non, volutpat in lacus. Ut varius semper lorem sit amet porta. Etiam eget metus lacus. Nulla facilisi. Cras nec nisi leo, in porttitor turpis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam dictum tortor vel elit laoreet ultrices. Donec placerat interdum sapien et placerat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aliquam dignissim tempor quam, ac aliquam lacus imperdiet at.', '', '0000-00-00'),
-(2, 'Titulo 2', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas aliquam semper congue. Praesent sapien ante, faucibus eu pretium vel, interdum ut massa. Ut dignissim pulvinar elit. Integer at libero sit amet libero porta tincidunt. Proin semper, urna ullamcorper vestibulum placerat, ligula risus elementum velit, sed laoreet purus dui quis velit. Donec vel velit eget lectus rutrum pellentesque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam gravida ullamcorper augue vel rutrum. Maecenas cursus eros eu sapien ornare ut aliquet tellus aliquet. Aliquam sit amet mauris at nibh placerat tempus. Sed in libero tellus, in sagittis tellus. Proin non interdum odio. Phasellus sit amet viverra ipsum. Morbi mauris lectus, interdum nec ullamcorper vitae, eleifend vel lorem. Curabitur eget nunc enim, vel pulvinar est. Aenean viverra, nulla nec eleifend cursus, nisi sem malesuada eros, et posuere justo magna vitae leo. Nulla a sollicitudin ligula. Suspendisse ac dolor diam. Aenean interdum justo sed lacus convallis quis venenatis turpis porttitor. In felis neque, bibendum ut venenatis sed, pulvinar quis massa. Donec luctus mi a justo condimentum consectetur. Morbi eget nunc ut diam dapibus porta. Nunc lectus nibh, faucibus ac rutrum non, volutpat in lacus. Ut varius semper lorem sit amet porta. Etiam eget metus lacus. Nulla facilisi. Cras nec nisi leo, in porttitor turpis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam dictum tortor vel elit laoreet ultrices. Donec placerat interdum sapien et placerat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aliquam dignissim tempor quam, ac aliquam lacus imperdiet at. Etiam ullamcorper diam et ante elementum eget sodales orci aliquet. Vivamus aliquet nibh eleifend turpis malesuada vehicula. Sed libero elit, aliquet nec varius vel, egestas vitae justo. Vivamus consectetur tincidunt placerat. Pellentesque eu sem at ante fermentum porta. Vivamus dignissim ipsum eget erat eleifend scelerisque ac ut lacus.', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas aliquam semper congue. Praesent sapien ante, faucibus eu pretium vel, interdum ut massa. Ut dignissim pulvinar elit. Integer at libero sit amet libero porta tincidunt. Proin semper, urna ullamcorper vestibulum placerat, ligula risus elementum velit, sed laoreet purus dui quis velit. Donec vel velit eget lectus rutrum pellentesque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam gravida ullamcorper augue vel rutrum. Maecenas cursus eros eu sapien ornare ut aliquet tellus aliquet. Aliquam sit amet mauris at nibh placerat tempus. Sed in libero tellus, in sagittis tellus. Proin non interdum odio. Phasellus sit amet viverra ipsum. Morbi mauris lectus, interdum nec ullamcorper vitae, eleifend vel lorem. Curabitur eget nunc enim, vel pulvinar est. Aenean viverra, nulla nec eleifend cursus, nisi sem malesuada eros, et posuere justo magna vitae leo. Nulla a sollicitudin ligula. Suspendisse ac dolor diam. Aenean interdum justo sed lacus convallis quis venenatis turpis porttitor. In felis neque, bibendum ut venenatis sed, pulvinar quis massa. Donec luctus mi a justo condimentum consectetur. Morbi eget nunc ut diam dapibus porta. Nunc lectus nibh, faucibus ac rutrum non, volutpat in lacus. Ut varius semper lorem sit amet porta. Etiam eget metus lacus. Nulla facilisi. Cras nec nisi leo, in porttitor turpis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam dictum tortor vel elit laoreet ultrices. Donec placerat interdum sapien et placerat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aliquam dignissim tempor quam, ac aliquam lacus imperdiet at. Etiam ullamcorper diam et ante elementum eget sodales orci aliquet. Vivamus aliquet nibh eleifend turpis malesuada vehicula. Sed libero elit, aliquet nec varius vel, egestas vitae justo. Vivamus consectetur tincidunt placerat. Pellentesque eu sem at ante fermentum porta. Vivamus dignissim ipsum eget erat eleifend scelerisque ac ut lacus.', '', '0000-00-00'),
-(3, 'titulo 3', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas aliquam semper congue. Praesent sapien ante, faucibus eu pretium vel, interdum ut massa. Ut dignissim pulvinar elit. Integer at libero sit amet libero porta tincidunt. Proin semper, urna ullamcorper vestibulum placerat, ligula risus elementum velit, sed laoreet purus dui quis velit. Donec vel velit eget lectus rutrum pellentesque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam gravida ullamcorper augue vel rutrum. Maecenas cursus eros eu sapien ornare ut aliquet tellus aliquet. Aliquam sit amet mauris at nibh placerat tempus. Sed in libero tellus, in sagittis tellus. Proin non interdum odio. Phasellus sit amet viverra ipsum. Morbi mauris lectus, interdum nec ullamcorper vitae, eleifend vel lorem. Curabitur eget nunc enim, vel pulvinar est. Aenean viverra, nulla nec eleifend cursus, nisi sem malesuada eros, et posuere justo magna vitae leo. Nulla a sollicitudin ligula. Suspendisse ac dolor diam. Aenean interdum justo sed lacus convallis quis venenatis turpis porttitor. In felis neque, bibendum ut venenatis sed, pulvinar quis massa. Donec luctus mi a justo condimentum consectetur. Morbi eget nunc ut diam dapibus porta. Nunc lectus nibh, faucibus ac rutrum non, volutpat in lacus. Ut varius semper lorem sit amet porta. Etiam eget metus lacus. Nulla facilisi. Cras nec nisi leo, in porttitor turpis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam dictum tortor vel elit laoreet ultrices. Donec placerat interdum sapien et placerat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aliquam dignissim tempor quam, ac aliquam lacus imperdiet at. Etiam ullamcorper diam et ante elementum eget sodales orci aliquet. Vivamus aliquet nibh eleifend turpis malesuada vehicula. Sed libero elit, aliquet nec varius vel, egestas vitae justo. Vivamus consectetur tincidunt placerat. Pellentesque eu sem at ante fermentum porta. Vivamus dignissim ipsum eget erat eleifend scelerisque ac ut lacus.', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas aliquam semper congue. Praesent sapien ante, faucibus eu pretium vel, interdum ut massa. Ut dignissim pulvinar elit. Integer at libero sit amet libero porta tincidunt. Proin semper, urna ullamcorper vestibulum placerat, ligula risus elementum velit, sed laoreet purus dui quis velit. Donec vel velit eget lectus rutrum pellentesque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam gravida ullamcorper augue vel rutrum. Maecenas cursus eros eu sapien ornare ut aliquet tellus aliquet. Aliquam sit amet mauris at nibh placerat tempus. Sed in libero tellus, in sagittis tellus. Proin non interdum odio. Phasellus sit amet viverra ipsum. Morbi mauris lectus, interdum nec ullamcorper vitae, eleifend vel lorem. Curabitur eget nunc enim, vel pulvinar est. Aenean viverra, nulla nec eleifend cursus, nisi sem malesuada eros, et posuere justo magna vitae leo. Nulla a sollicitudin ligula. Suspendisse ac dolor diam. Aenean interdum justo sed lacus convallis quis venenatis turpis porttitor. In felis neque, bibendum ut venenatis sed, pulvinar quis massa. Donec luctus mi a justo condimentum consectetur. Morbi eget nunc ut diam dapibus porta. Nunc lectus nibh, faucibus ac rutrum non, volutpat in lacus. Ut varius semper lorem sit amet porta. Etiam eget metus lacus. Nulla facilisi. Cras nec nisi leo, in porttitor turpis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam dictum tortor vel elit laoreet ultrices. Donec placerat interdum sapien et placerat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aliquam dignissim tempor quam, ac aliquam lacus imperdiet at. Etiam ullamcorper diam et ante elementum eget sodales orci aliquet. Vivamus aliquet nibh eleifend turpis malesuada vehicula. Sed libero elit, aliquet nec varius vel, egestas vitae justo. Vivamus consectetur tincidunt placerat. Pellentesque eu sem at ante fermentum porta. Vivamus dignissim ipsum eget erat eleifend scelerisque ac ut lacus.', '', '0000-00-00'),
-(4, 'titulo qwe', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas aliquam semper congue. Praesent sapien ante, faucibus eu pretium vel, interdum ut massa. Ut dignissim pulvinar elit. Integer at libero sit amet libero porta tincidunt. Proin semper, urna ullamcorper vestibulum placerat, ligula risus elementum velit, sed laoreet purus dui quis velit. Donec vel velit eget lectus rutrum pellentesque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam gravida ullamcorper augue vel rutrum. Maecenas cursus eros eu sapien ornare ut aliquet tellus aliquet. Aliquam sit amet mauris at nibh placerat tempus. Sed in libero tellus, in sagittis tellus. Proin non interdum odio. Phasellus sit amet viverra ipsum. Morbi mauris lectus, interdum nec ullamcorper vitae, eleifend vel lorem. Curabitur eget nunc enim, vel pulvinar est. Aenean viverra, nulla nec eleifend cursus, nisi sem malesuada eros, et posuere justo magna vitae leo. Nulla a sollicitudin ligula. Suspendisse ac dolor diam. Aenean interdum justo sed lacus convallis quis venenatis turpis porttitor. In felis neque, bibendum ut venenatis sed, pulvinar quis massa. Donec luctus mi a justo condimentum consectetur. Morbi eget nunc ut diam dapibus porta. Nunc lectus nibh, faucibus ac rutrum non, volutpat in lacus. Ut varius semper lorem sit amet porta. Etiam eget metus lacus. Nulla facilisi. Cras nec nisi leo, in porttitor turpis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam dictum tortor vel elit laoreet ultrices. Donec placerat interdum sapien et placerat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aliquam dignissim tempor quam, ac aliquam lacus imperdiet at. Etiam ullamcorper diam et ante elementum eget sodales orci aliquet. Vivamus aliquet nibh eleifend turpis malesuada vehicula. Sed libero elit, aliquet nec varius vel, egestas vitae justo. Vivamus consectetur tincidunt placerat. Pellentesque eu sem at ante fermentum porta. Vivamus dignissim ipsum eget erat eleifend scelerisque ac ut lacus.', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas aliquam semper congue. Praesent sapien ante, faucibus eu pretium vel, interdum ut massa. Ut dignissim pulvinar elit. Integer at libero sit amet libero porta tincidunt. Proin semper, urna ullamcorper vestibulum placerat, ligula risus elementum velit, sed laoreet purus dui quis velit. Donec vel velit eget lectus rutrum pellentesque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam gravida ullamcorper augue vel rutrum. Maecenas cursus eros eu sapien ornare ut aliquet tellus aliquet. Aliquam sit amet mauris at nibh placerat tempus. Sed in libero tellus, in sagittis tellus. Proin non interdum odio. Phasellus sit amet viverra ipsum. Morbi mauris lectus, interdum nec ullamcorper vitae, eleifend vel lorem. Curabitur eget nunc enim, vel pulvinar est. Aenean viverra, nulla nec eleifend cursus, nisi sem malesuada eros, et posuere justo magna vitae leo. Nulla a sollicitudin ligula. Suspendisse ac dolor diam. Aenean interdum justo sed lacus convallis quis venenatis turpis porttitor. In felis neque, bibendum ut venenatis sed, pulvinar quis massa. Donec luctus mi a justo condimentum consectetur. Morbi eget nunc ut diam dapibus porta. Nunc lectus nibh, faucibus ac rutrum non, volutpat in lacus. Ut varius semper lorem sit amet porta. Etiam eget metus lacus. Nulla facilisi. Cras nec nisi leo, in porttitor turpis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam dictum tortor vel elit laoreet ultrices. Donec placerat interdum sapien et placerat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aliquam dignissim tempor quam, ac aliquam lacus imperdiet at. Etiam ullamcorper diam et ante elementum eget sodales orci aliquet. Vivamus aliquet nibh eleifend turpis malesuada vehicula. Sed libero elit, aliquet nec varius vel, egestas vitae justo. Vivamus consectetur tincidunt placerat. Pellentesque eu sem at ante fermentum porta. Vivamus dignissim ipsum eget erat eleifend scelerisque ac ut lacus.', '', '0000-00-00'),
-(5, 'titulo pi', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas aliquam semper congue. Praesent sapien ante, faucibus eu pretium vel, interdum ut massa. Ut dignissim pulvinar elit. Integer at libero sit amet libero porta tincidunt. Proin semper, urna ullamcorper vestibulum placerat, ligula risus elementum velit, sed laoreet purus dui quis velit. Donec vel velit eget lectus rutrum pellentesque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam gravida ullamcorper augue vel rutrum. Maecenas cursus eros eu sapien ornare ut aliquet tellus aliquet. Aliquam sit amet mauris at nibh placerat tempus. Sed in libero tellus, in sagittis tellus. Proin non interdum odio. Phasellus sit amet viverra ipsum. Morbi mauris lectus, interdum nec ullamcorper vitae, eleifend vel lorem. Curabitur eget nunc enim, vel pulvinar est. Aenean viverra, nulla nec eleifend cursus, nisi sem malesuada eros, et posuere justo magna vitae leo. Nulla a sollicitudin ligula. Suspendisse ac dolor diam. Aenean interdum justo sed lacus convallis quis venenatis turpis porttitor. In felis neque, bibendum ut venenatis sed, pulvinar quis massa. Donec luctus mi a justo condimentum consectetur. Morbi eget nunc ut diam dapibus porta. Nunc lectus nibh, faucibus ac rutrum non, volutpat in lacus. Ut varius semper lorem sit amet porta. Etiam eget metus lacus. Nulla facilisi. Cras nec nisi leo, in porttitor turpis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam dictum tortor vel elit laoreet ultrices. Donec placerat interdum sapien et placerat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aliquam dignissim tempor quam, ac aliquam lacus imperdiet at. Etiam ullamcorper diam et ante elementum eget sodales orci aliquet. Vivamus aliquet nibh eleifend turpis malesuada vehicula. Sed libero elit, aliquet nec varius vel, egestas vitae justo. Vivamus consectetur tincidunt placerat. Pellentesque eu sem at ante fermentum porta. Vivamus dignissim ipsum eget erat eleifend scelerisque ac ut lacus.', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas aliquam semper congue. Praesent sapien ante, faucibus eu pretium vel, interdum ut massa. Ut dignissim pulvinar elit. Integer at libero sit amet libero porta tincidunt. Proin semper, urna ullamcorper vestibulum placerat, ligula risus elementum velit, sed laoreet purus dui quis velit. Donec vel velit eget lectus rutrum pellentesque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam gravida ullamcorper augue vel rutrum. Maecenas cursus eros eu sapien ornare ut aliquet tellus aliquet. Aliquam sit amet mauris at nibh placerat tempus. Sed in libero tellus, in sagittis tellus. Proin non interdum odio. Phasellus sit amet viverra ipsum. Morbi mauris lectus, interdum nec ullamcorper vitae, eleifend vel lorem. Curabitur eget nunc enim, vel pulvinar est. Aenean viverra, nulla nec eleifend cursus, nisi sem malesuada eros, et posuere justo magna vitae leo. Nulla a sollicitudin ligula. Suspendisse ac dolor diam. Aenean interdum justo sed lacus convallis quis venenatis turpis porttitor. In felis neque, bibendum ut venenatis sed, pulvinar quis massa. Donec luctus mi a justo condimentum consectetur. Morbi eget nunc ut diam dapibus porta. Nunc lectus nibh, faucibus ac rutrum non, volutpat in lacus. Ut varius semper lorem sit amet porta. Etiam eget metus lacus. Nulla facilisi. Cras nec nisi leo, in porttitor turpis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam dictum tortor vel elit laoreet ultrices. Donec placerat interdum sapien et placerat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aliquam dignissim tempor quam, ac aliquam lacus imperdiet at. Etiam ullamcorper diam et ante elementum eget sodales orci aliquet. Vivamus aliquet nibh eleifend turpis malesuada vehicula. Sed libero elit, aliquet nec varius vel, egestas vitae justo. Vivamus consectetur tincidunt placerat. Pellentesque eu sem at ante fermentum porta. Vivamus dignissim ipsum eget erat eleifend scelerisque ac ut lacus.', '', '0000-00-00'),
-(6, 'titulo poqe', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas aliquam semper congue. Praesent sapien ante, faucibus eu pretium vel, interdum ut massa. Ut dignissim pulvinar elit. Integer at libero sit amet libero porta tincidunt. Proin semper, urna ullamcorper vestibulum placerat, ligula risus elementum velit, sed laoreet purus dui quis velit. Donec vel velit eget lectus rutrum pellentesque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam gravida ullamcorper augue vel rutrum. Maecenas cursus eros eu sapien ornare ut aliquet tellus aliquet. Aliquam sit amet mauris at nibh placerat tempus. Sed in libero tellus, in sagittis tellus. Proin non interdum odio. Phasellus sit amet viverra ipsum. Morbi mauris lectus, interdum nec ullamcorper vitae, eleifend vel lorem. Curabitur eget nunc enim, vel pulvinar est. Aenean viverra, nulla nec eleifend cursus, nisi sem malesuada eros, et posuere justo magna vitae leo. Nulla a sollicitudin ligula. Suspendisse ac dolor diam. Aenean interdum justo sed lacus convallis quis venenatis turpis porttitor. In felis neque, bibendum ut venenatis sed, pulvinar quis massa. Donec luctus mi a justo condimentum consectetur. Morbi eget nunc ut diam dapibus porta. Nunc lectus nibh, faucibus ac rutrum non, volutpat in lacus. Ut varius semper lorem sit amet porta. Etiam eget metus lacus. Nulla facilisi. Cras nec nisi leo, in porttitor turpis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam dictum tortor vel elit laoreet ultrices. Donec placerat interdum sapien et placerat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aliquam dignissim tempor quam, ac aliquam lacus imperdiet at. Etiam ullamcorper diam et ante elementum eget sodales orci aliquet. Vivamus aliquet nibh eleifend turpis malesuada vehicula. Sed libero elit, aliquet nec varius vel, egestas vitae justo. Vivamus consectetur tincidunt placerat. Pellentesque eu sem at ante fermentum porta. Vivamus dignissim ipsum eget erat eleifend scelerisque ac ut lacus.', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas aliquam semper congue. Praesent sapien ante, faucibus eu pretium vel, interdum ut massa. Ut dignissim pulvinar elit. Integer at libero sit amet libero porta tincidunt. Proin semper, urna ullamcorper vestibulum placerat, ligula risus elementum velit, sed laoreet purus dui quis velit. Donec vel velit eget lectus rutrum pellentesque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam gravida ullamcorper augue vel rutrum. Maecenas cursus eros eu sapien ornare ut aliquet tellus aliquet. Aliquam sit amet mauris at nibh placerat tempus. Sed in libero tellus, in sagittis tellus. Proin non interdum odio. Phasellus sit amet viverra ipsum. Morbi mauris lectus, interdum nec ullamcorper vitae, eleifend vel lorem. Curabitur eget nunc enim, vel pulvinar est. Aenean viverra, nulla nec eleifend cursus, nisi sem malesuada eros, et posuere justo magna vitae leo. Nulla a sollicitudin ligula. Suspendisse ac dolor diam. Aenean interdum justo sed lacus convallis quis venenatis turpis porttitor. In felis neque, bibendum ut venenatis sed, pulvinar quis massa. Donec luctus mi a justo condimentum consectetur. Morbi eget nunc ut diam dapibus porta. Nunc lectus nibh, faucibus ac rutrum non, volutpat in lacus. Ut varius semper lorem sit amet porta. Etiam eget metus lacus. Nulla facilisi. Cras nec nisi leo, in porttitor turpis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam dictum tortor vel elit laoreet ultrices. Donec placerat interdum sapien et placerat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aliquam dignissim tempor quam, ac aliquam lacus imperdiet at. Etiam ullamcorper diam et ante elementum eget sodales orci aliquet. Vivamus aliquet nibh eleifend turpis malesuada vehicula. Sed libero elit, aliquet nec varius vel, egestas vitae justo. Vivamus consectetur tincidunt placerat. Pellentesque eu sem at ante fermentum porta. Vivamus dignissim ipsum eget erat eleifend scelerisque ac ut lacus.', '', '0000-00-00'),
-(7, 'titulo poiqwepoi', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas aliquam semper congue. Praesent sapien ante, faucibus eu pretium vel, interdum ut massa. Ut dignissim pulvinar elit. Integer at libero sit amet libero porta tincidunt. Proin semper, urna ullamcorper vestibulum placerat, ligula risus elementum velit, sed laoreet purus dui quis velit. Donec vel velit eget lectus rutrum pellentesque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam gravida ullamcorper augue vel rutrum. Maecenas cursus eros eu sapien ornare ut aliquet tellus aliquet. Aliquam sit amet mauris at nibh placerat tempus. Sed in libero tellus, in sagittis tellus. Proin non interdum odio. Phasellus sit amet viverra ipsum. Morbi mauris lectus, interdum nec ullamcorper vitae, eleifend vel lorem. Curabitur eget nunc enim, vel pulvinar est. Aenean viverra, nulla nec eleifend cursus, nisi sem malesuada eros, et posuere justo magna vitae leo. Nulla a sollicitudin ligula. Suspendisse ac dolor diam. Aenean interdum justo sed lacus convallis quis venenatis turpis porttitor. In felis neque, bibendum ut venenatis sed, pulvinar quis massa. Donec luctus mi a justo condimentum consectetur. Morbi eget nunc ut diam dapibus porta. Nunc lectus nibh, faucibus ac rutrum non, volutpat in lacus. Ut varius semper lorem sit amet porta. Etiam eget metus lacus. Nulla facilisi. Cras nec nisi leo, in porttitor turpis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam dictum tortor vel elit laoreet ultrices. Donec placerat interdum sapien et placerat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aliquam dignissim tempor quam, ac aliquam lacus imperdiet at. Etiam ullamcorper diam et ante elementum eget sodales orci aliquet. Vivamus aliquet nibh eleifend turpis malesuada vehicula. Sed libero elit, aliquet nec varius vel, egestas vitae justo. Vivamus consectetur tincidunt placerat. Pellentesque eu sem at ante fermentum porta. Vivamus dignissim ipsum eget erat eleifend scelerisque ac ut lacus.', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas aliquam semper congue. Praesent sapien ante, faucibus eu pretium vel, interdum ut massa. Ut dignissim pulvinar elit. Integer at libero sit amet libero porta tincidunt. Proin semper, urna ullamcorper vestibulum placerat, ligula risus elementum velit, sed laoreet purus dui quis velit. Donec vel velit eget lectus rutrum pellentesque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam gravida ullamcorper augue vel rutrum. Maecenas cursus eros eu sapien ornare ut aliquet tellus aliquet. Aliquam sit amet mauris at nibh placerat tempus. Sed in libero tellus, in sagittis tellus. Proin non interdum odio. Phasellus sit amet viverra ipsum. Morbi mauris lectus, interdum nec ullamcorper vitae, eleifend vel lorem. Curabitur eget nunc enim, vel pulvinar est. Aenean viverra, nulla nec eleifend cursus, nisi sem malesuada eros, et posuere justo magna vitae leo. Nulla a sollicitudin ligula. Suspendisse ac dolor diam. Aenean interdum justo sed lacus convallis quis venenatis turpis porttitor. In felis neque, bibendum ut venenatis sed, pulvinar quis massa. Donec luctus mi a justo condimentum consectetur. Morbi eget nunc ut diam dapibus porta. Nunc lectus nibh, faucibus ac rutrum non, volutpat in lacus. Ut varius semper lorem sit amet porta. Etiam eget metus lacus. Nulla facilisi. Cras nec nisi leo, in porttitor turpis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam dictum tortor vel elit laoreet ultrices. Donec placerat interdum sapien et placerat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aliquam dignissim tempor quam, ac aliquam lacus imperdiet at. Etiam ullamcorper diam et ante elementum eget sodales orci aliquet. Vivamus aliquet nibh eleifend turpis malesuada vehicula. Sed libero elit, aliquet nec varius vel, egestas vitae justo. Vivamus consectetur tincidunt placerat. Pellentesque eu sem at ante fermentum porta. Vivamus dignissim ipsum eget erat eleifend scelerisque ac ut lacus.', '', '0000-00-00'),
-(8, 'titulo qepio', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas aliquam semper congue. Praesent sapien ante, faucibus eu pretium vel, interdum ut massa. Ut dignissim pulvinar elit. Integer at libero sit amet libero porta tincidunt. Proin semper, urna ullamcorper vestibulum placerat, ligula risus elementum velit, sed laoreet purus dui quis velit. Donec vel velit eget lectus rutrum pellentesque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam gravida ullamcorper augue vel rutrum. Maecenas cursus eros eu sapien ornare ut aliquet tellus aliquet. Aliquam sit amet mauris at nibh placerat tempus. Sed in libero tellus, in sagittis tellus. Proin non interdum odio. Phasellus sit amet viverra ipsum. Morbi mauris lectus, interdum nec ullamcorper vitae, eleifend vel lorem. Curabitur eget nunc enim, vel pulvinar est. Aenean viverra, nulla nec eleifend cursus, nisi sem malesuada eros, et posuere justo magna vitae leo. Nulla a sollicitudin ligula. Suspendisse ac dolor diam. Aenean interdum justo sed lacus convallis quis venenatis turpis porttitor. In felis neque, bibendum ut venenatis sed, pulvinar quis massa. Donec luctus mi a justo condimentum consectetur. Morbi eget nunc ut diam dapibus porta. Nunc lectus nibh, faucibus ac rutrum non, volutpat in lacus. Ut varius semper lorem sit amet porta. Etiam eget metus lacus. Nulla facilisi. Cras nec nisi leo, in porttitor turpis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam dictum tortor vel elit laoreet ultrices. Donec placerat interdum sapien et placerat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aliquam dignissim tempor quam, ac aliquam lacus imperdiet at. Etiam ullamcorper diam et ante elementum eget sodales orci aliquet. Vivamus aliquet nibh eleifend turpis malesuada vehicula. Sed libero elit, aliquet nec varius vel, egestas vitae justo. Vivamus consectetur tincidunt placerat. Pellentesque eu sem at ante fermentum porta. Vivamus dignissim ipsum eget erat eleifend scelerisque ac ut lacus.', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas aliquam semper congue. Praesent sapien ante, faucibus eu pretium vel, interdum ut massa. Ut dignissim pulvinar elit. Integer at libero sit amet libero porta tincidunt. Proin semper, urna ullamcorper vestibulum placerat, ligula risus elementum velit, sed laoreet purus dui quis velit. Donec vel velit eget lectus rutrum pellentesque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam gravida ullamcorper augue vel rutrum. Maecenas cursus eros eu sapien ornare ut aliquet tellus aliquet. Aliquam sit amet mauris at nibh placerat tempus. Sed in libero tellus, in sagittis tellus. Proin non interdum odio. Phasellus sit amet viverra ipsum. Morbi mauris lectus, interdum nec ullamcorper vitae, eleifend vel lorem. Curabitur eget nunc enim, vel pulvinar est. Aenean viverra, nulla nec eleifend cursus, nisi sem malesuada eros, et posuere justo magna vitae leo. Nulla a sollicitudin ligula. Suspendisse ac dolor diam. Aenean interdum justo sed lacus convallis quis venenatis turpis porttitor. In felis neque, bibendum ut venenatis sed, pulvinar quis massa. Donec luctus mi a justo condimentum consectetur. Morbi eget nunc ut diam dapibus porta. Nunc lectus nibh, faucibus ac rutrum non, volutpat in lacus. Ut varius semper lorem sit amet porta. Etiam eget metus lacus. Nulla facilisi. Cras nec nisi leo, in porttitor turpis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam dictum tortor vel elit laoreet ultrices. Donec placerat interdum sapien et placerat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aliquam dignissim tempor quam, ac aliquam lacus imperdiet at. Etiam ullamcorper diam et ante elementum eget sodales orci aliquet. Vivamus aliquet nibh eleifend turpis malesuada vehicula. Sed libero elit, aliquet nec varius vel, egestas vitae justo. Vivamus consectetur tincidunt placerat. Pellentesque eu sem at ante fermentum porta. Vivamus dignissim ipsum eget erat eleifend scelerisque ac ut lacus.', '', '0000-00-00'),
-(9, 'titulo pkapodk', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas aliquam semper congue. Praesent sapien ante, faucibus eu pretium vel, interdum ut massa. Ut dignissim pulvinar elit. Integer at libero sit amet libero porta tincidunt. Proin semper, urna ullamcorper vestibulum placerat, ligula risus elementum velit, sed laoreet purus dui quis velit. Donec vel velit eget lectus rutrum pellentesque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam gravida ullamcorper augue vel rutrum. Maecenas cursus eros eu sapien ornare ut aliquet tellus aliquet. Aliquam sit amet mauris at nibh placerat tempus. Sed in libero tellus, in sagittis tellus. Proin non interdum odio. Phasellus sit amet viverra ipsum. Morbi mauris lectus, interdum nec ullamcorper vitae, eleifend vel lorem. Curabitur eget nunc enim, vel pulvinar est. Aenean viverra, nulla nec eleifend cursus, nisi sem malesuada eros, et posuere justo magna vitae leo. Nulla a sollicitudin ligula. Suspendisse ac dolor diam. Aenean interdum justo sed lacus convallis quis venenatis turpis porttitor. In felis neque, bibendum ut venenatis sed, pulvinar quis massa. Donec luctus mi a justo condimentum consectetur. Morbi eget nunc ut diam dapibus porta. Nunc lectus nibh, faucibus ac rutrum non, volutpat in lacus. Ut varius semper lorem sit amet porta. Etiam eget metus lacus. Nulla facilisi. Cras nec nisi leo, in porttitor turpis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam dictum tortor vel elit laoreet ultrices. Donec placerat interdum sapien et placerat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aliquam dignissim tempor quam, ac aliquam lacus imperdiet at. Etiam ullamcorper diam et ante elementum eget sodales orci aliquet. Vivamus aliquet nibh eleifend turpis malesuada vehicula. Sed libero elit, aliquet nec varius vel, egestas vitae justo. Vivamus consectetur tincidunt placerat. Pellentesque eu sem at ante fermentum porta. Vivamus dignissim ipsum eget erat eleifend scelerisque ac ut lacus.', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas aliquam semper congue. Praesent sapien ante, faucibus eu pretium vel, interdum ut massa. Ut dignissim pulvinar elit. Integer at libero sit amet libero porta tincidunt. Proin semper, urna ullamcorper vestibulum placerat, ligula risus elementum velit, sed laoreet purus dui quis velit. Donec vel velit eget lectus rutrum pellentesque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam gravida ullamcorper augue vel rutrum. Maecenas cursus eros eu sapien ornare ut aliquet tellus aliquet. Aliquam sit amet mauris at nibh placerat tempus. Sed in libero tellus, in sagittis tellus. Proin non interdum odio. Phasellus sit amet viverra ipsum. Morbi mauris lectus, interdum nec ullamcorper vitae, eleifend vel lorem. Curabitur eget nunc enim, vel pulvinar est. Aenean viverra, nulla nec eleifend cursus, nisi sem malesuada eros, et posuere justo magna vitae leo. Nulla a sollicitudin ligula. Suspendisse ac dolor diam. Aenean interdum justo sed lacus convallis quis venenatis turpis porttitor. In felis neque, bibendum ut venenatis sed, pulvinar quis massa. Donec luctus mi a justo condimentum consectetur. Morbi eget nunc ut diam dapibus porta. Nunc lectus nibh, faucibus ac rutrum non, volutpat in lacus. Ut varius semper lorem sit amet porta. Etiam eget metus lacus. Nulla facilisi. Cras nec nisi leo, in porttitor turpis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam dictum tortor vel elit laoreet ultrices. Donec placerat interdum sapien et placerat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aliquam dignissim tempor quam, ac aliquam lacus imperdiet at. Etiam ullamcorper diam et ante elementum eget sodales orci aliquet. Vivamus aliquet nibh eleifend turpis malesuada vehicula. Sed libero elit, aliquet nec varius vel, egestas vitae justo. Vivamus consectetur tincidunt placerat. Pellentesque eu sem at ante fermentum porta. Vivamus dignissim ipsum eget erat eleifend scelerisque ac ut lacus.', '', '0000-00-00'),
-(10, 'titulo opiaksjdo', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas aliquam semper congue. Praesent sapien ante, faucibus eu pretium vel, interdum ut massa. Ut dignissim pulvinar elit. Integer at libero sit amet libero porta tincidunt. Proin semper, urna ullamcorper vestibulum placerat, ligula risus elementum velit, sed laoreet purus dui quis velit. Donec vel velit eget lectus rutrum pellentesque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam gravida ullamcorper augue vel rutrum. Maecenas cursus eros eu sapien ornare ut aliquet tellus aliquet. Aliquam sit amet mauris at nibh placerat tempus. Sed in libero tellus, in sagittis tellus. Proin non interdum odio. Phasellus sit amet viverra ipsum. Morbi mauris lectus, interdum nec ullamcorper vitae, eleifend vel lorem. Curabitur eget nunc enim, vel pulvinar est. Aenean viverra, nulla nec eleifend cursus, nisi sem malesuada eros, et posuere justo magna vitae leo. Nulla a sollicitudin ligula. Suspendisse ac dolor diam. Aenean interdum justo sed lacus convallis quis venenatis turpis porttitor. In felis neque, bibendum ut venenatis sed, pulvinar quis massa. Donec luctus mi a justo condimentum consectetur. Morbi eget nunc ut diam dapibus porta. Nunc lectus nibh, faucibus ac rutrum non, volutpat in lacus. Ut varius semper lorem sit amet porta. Etiam eget metus lacus. Nulla facilisi. Cras nec nisi leo, in porttitor turpis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam dictum tortor vel elit laoreet ultrices. Donec placerat interdum sapien et placerat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aliquam dignissim tempor quam, ac aliquam lacus imperdiet at. Etiam ullamcorper diam et ante elementum eget sodales orci aliquet. Vivamus aliquet nibh eleifend turpis malesuada vehicula. Sed libero elit, aliquet nec varius vel, egestas vitae justo. Vivamus consectetur tincidunt placerat. Pellentesque eu sem at ante fermentum porta. Vivamus dignissim ipsum eget erat eleifend scelerisque ac ut lacus.', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas aliquam semper congue. Praesent sapien ante, faucibus eu pretium vel, interdum ut massa. Ut dignissim pulvinar elit. Integer at libero sit amet libero porta tincidunt. Proin semper, urna ullamcorper vestibulum placerat, ligula risus elementum velit, sed laoreet purus dui quis velit. Donec vel velit eget lectus rutrum pellentesque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam gravida ullamcorper augue vel rutrum. Maecenas cursus eros eu sapien ornare ut aliquet tellus aliquet. Aliquam sit amet mauris at nibh placerat tempus. Sed in libero tellus, in sagittis tellus. Proin non interdum odio. Phasellus sit amet viverra ipsum. Morbi mauris lectus, interdum nec ullamcorper vitae, eleifend vel lorem. Curabitur eget nunc enim, vel pulvinar est. Aenean viverra, nulla nec eleifend cursus, nisi sem malesuada eros, et posuere justo magna vitae leo. Nulla a sollicitudin ligula. Suspendisse ac dolor diam. Aenean interdum justo sed lacus convallis quis venenatis turpis porttitor. In felis neque, bibendum ut venenatis sed, pulvinar quis massa. Donec luctus mi a justo condimentum consectetur. Morbi eget nunc ut diam dapibus porta. Nunc lectus nibh, faucibus ac rutrum non, volutpat in lacus. Ut varius semper lorem sit amet porta. Etiam eget metus lacus. Nulla facilisi. Cras nec nisi leo, in porttitor turpis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam dictum tortor vel elit laoreet ultrices. Donec placerat interdum sapien et placerat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aliquam dignissim tempor quam, ac aliquam lacus imperdiet at. Etiam ullamcorper diam et ante elementum eget sodales orci aliquet. Vivamus aliquet nibh eleifend turpis malesuada vehicula. Sed libero elit, aliquet nec varius vel, egestas vitae justo. Vivamus consectetur tincidunt placerat. Pellentesque eu sem at ante fermentum porta. Vivamus dignissim ipsum eget erat eleifend scelerisque ac ut lacus.', '', '0000-00-00'),
-(11, 'klkjñflk', 'return $this->db->count_all(''artista'');return $this->db->count_all(''artista'');return $this->db->count_all(''artista'');return $this->db->count_all(''artista'');return $this->db->count_all(''artista'');return $this->db->count_all(''artista'');return $this->db->count_all(''artista'');return $this->db->count_all(''artista'');', 'return $this->db->count_all(''artista'');return $this->db->count_all(''artista'');return $this->db->count_all(''artista'');return $this->db->count_all(''artista'');return $this->db->count_all(''artista'');return $this->db->count_all(''artista'');return $this->db->count_all(''artista'');return $this->db->count_all(''artista'');return $this->db->count_all(''artista'');', '', '0000-00-00'),
-(12, 'ksljlksfsdfklj', 'return $this->db->count_all(''artista'');return $this->db->count_all(''artista'');return $this->db->count_all(''artista'');return $this->db->count_all(''artista'');return $this->db->count_all(''artista'');return $this->db->count_all(''artista'');return $this->db->count_all(''artista'');return $this->db->count_all(''artista'');return $this->db->count_all(''artista'');', 'return $this->db->count_all(''artista'');return $this->db->count_all(''artista'');return $this->db->count_all(''artista'');return $this->db->count_all(''artista'');return $this->db->count_all(''artista'');return $this->db->count_all(''artista'');return $this->db->count_all(''artista'');return $this->db->count_all(''artista'');return $this->db->count_all(''artista'');return $this->db->count_all(''artista'');return $this->db->count_all(''artista'');return $this->db->count_all(''artista'');', '', '0000-00-00');
+INSERT INTO `blog` (`id_entrada`, `titulo`, `texto`, `fecha`) VALUES
+(13, 'Futuro', '<p>\r\n	asdasdasdasdasdasd</p>\r\n', '2013-04-01'),
+(14, 'Pasado', '<p>\r\n	jsdlasjdljasldkjaskldjaskldjl</p>\r\n', '2013-01-01'),
+(15, 'adad', '<p>\r\n	jslkajsldjasld</p>\r\n', '2013-04-11');
 
 -- --------------------------------------------------------
 
@@ -136,16 +145,64 @@ CREATE TABLE IF NOT EXISTS `colaborador` (
 --
 
 INSERT INTO `colaborador` (`id_colaborador`, `nombre`, `logo`, `descripcion`) VALUES
-(1, 'Lorem asd', 'colaborador1.gif', 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"'),
-(2, 'kjashdlkja', 'colaborador1.gif', 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"'),
-(3, 'ñklvmjlasdfc', 'colaborador1.gif', 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"'),
-(4, 'lkasjdlkasjdl', 'colaborador1.gif', 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"'),
-(5, 'lkanjcklsdjf', 'colaborador1.gif', 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"'),
-(6, 'lkjañklscfmjñdlf', 'colaborador1.gif', 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"'),
-(7, 'mlñaskdjcmlfj', 'colaborador1.gif', 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"'),
-(8, 'ñlaskcmjf', 'colaborador1.gif', 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"'),
-(9, 'lskacfmjdk', 'colaborador1.gif', 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"'),
-(10, 'lkmjlñcjñdfk', 'colaborador1.gif', 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"');
+(1, 'Lorem asd', '227a7-colaborador1.gif', '<p>\r\n	Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?&quot;</p>\r\n'),
+(2, 'kjashdlkja', '', 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"'),
+(3, 'ñklvmjlasdfc', '', 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"'),
+(4, 'lkasjdlkasjdl', '', 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"'),
+(5, 'lkanjcklsdjf', '', 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"'),
+(6, 'lkjañklscfmjñdlf', '', 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"'),
+(7, 'mlñaskdjcmlfj', '', 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"'),
+(8, 'ñlaskcmjf', 'a0eef-feliz2_f174ee.gif', '<p>\r\n	Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?&quot;</p>\r\n'),
+(9, 'lskacfmjdk', 'da943-1282404_700b.jpg', '<p>\r\n	Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?&quot;</p>\r\n'),
+(10, 'lkmjlñcjñdfk', 'd5544-gold-lion.jpg', '<p>\r\n	Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?&quot;</p>\r\n');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `colaboradoresdestacados`
+--
+
+CREATE TABLE IF NOT EXISTS `colaboradoresdestacados` (
+  `id_destacado` int(11) NOT NULL AUTO_INCREMENT,
+  `id_colaborador` int(11) NOT NULL,
+  PRIMARY KEY (`id_destacado`),
+  KEY `id_colaborador` (`id_colaborador`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+
+--
+-- Volcado de datos para la tabla `colaboradoresdestacados`
+--
+
+INSERT INTO `colaboradoresdestacados` (`id_destacado`, `id_colaborador`) VALUES
+(1, 1);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `descripcion`
+--
+
+CREATE TABLE IF NOT EXISTS `descripcion` (
+  `id_descripcion` int(11) NOT NULL AUTO_INCREMENT,
+  `texto` text NOT NULL,
+  `posicion` varchar(300) NOT NULL,
+  `clave` varchar(100) NOT NULL,
+  PRIMARY KEY (`id_descripcion`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=10 ;
+
+--
+-- Volcado de datos para la tabla `descripcion`
+--
+
+INSERT INTO `descripcion` (`id_descripcion`, `texto`, `posicion`, `clave`) VALUES
+(1, 'Lemon art es la promotora cultural mas importante de tijuana, ha impulsado a mas de X artistas y tiene trabajos en todo Mexico.', 'Descripción principal de lemon art.', 'lemonprincipal'),
+(2, 'Lemon art es la promotora cultural mas importante de tijuana, ha impulsado a mas de X artistas y tiene trabajos en todo Mexico.', 'Descripcion footer lemon art', 'lemonfooter'),
+(3, 'Descripción artistas destacados', 'Descripcion artistas destacados', 'artistadestacado'),
+(4, 'Descripcion artistas', 'Descripcion artistas ', 'artista'),
+(5, 'Cosas legales', 'Footer legal', 'legalfooter'),
+(6, 'Descripcion eventos destacados', 'Descripcion eventos destacados', 'eventodestacado'),
+(8, 'Descripcion colaboradores destacados', 'Descripcion colaboradores destacados home', 'colaboradordestacado'),
+(9, 'Descripcion colaboradores', 'Descripcion colaboradores', 'colaborador');
 
 -- --------------------------------------------------------
 
@@ -173,25 +230,41 @@ CREATE TABLE IF NOT EXISTS `evento` (
   `lugar` varchar(255) NOT NULL,
   `anio` int(11) NOT NULL,
   `descripcion` text NOT NULL,
-  `imagen` varchar(255) NOT NULL,
-  PRIMARY KEY (`id_evento`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=11 ;
+  `fecha` date NOT NULL,
+  PRIMARY KEY (`id_evento`),
+  KEY `anio` (`anio`),
+  KEY `anio_2` (`anio`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
 
 --
 -- Volcado de datos para la tabla `evento`
 --
 
-INSERT INTO `evento` (`id_evento`, `nombre`, `lugar`, `anio`, `descripcion`, `imagen`) VALUES
-(1, 'nflkjladsf', 'lskadfnclasdkj', 2013, 'lksjclsdfkjclaksdjf', ''),
-(2, 'lkasjfcapoerinñ', 'ñsilaudoivurt', 2013, 'lasdhjfnadfkcf', ''),
-(3, 'nioyuiortnvñ', 'asclñumriot', 2013, 'klasjclksadjfl jl', 'l'),
-(4, 'zzybuinh,mouinyuib', 'ktbyutfvybhnniom', 2012, 'jhkgbkhjgkjhkjbkl klsdjncjashkldj aksjdfhcnkljh kadjshfcjksh klashjcfnkjashfkajsdhfkluehrkjhk', ''),
-(5, '2012', 'lkasnjcfkl', 2011, ',asfkjhdckjfhkasjdhfcasdjhcfkljadhlcfkjal', 'nkljlkj'),
-(6, 'kljkkhbkjgvykgnlm', 'kmkllkmjlkmjl', 2008, 'txerfvtyghbunitsxdrcgfvyyguhkjbtytguhjhsdfhkjfhjkdfhkjuierjhkdfskhjsd', ''),
-(7, 'ploplop', 'ploplopl', 2010, 'opmopqxmiopiqxmexeeeeewqe', ''),
-(8, 'oqximpeowqixeop', 'xpmoqiweopximwqe', 2011, 'limasolcioliopaixopimaopimxepwq', ''),
-(9, 'lknlkcjñsklajdcaklñsd', 'lksajclaksdnjf', 2010, 'salknjdlsknfjlksdjflskjfklsjflksjfklasnklfjslcfklskadfnjclaskdjfnclskajcflasdcksdfncjsacf\r\ncasdopfcsaf\r\ncasdf\r\nasdcf\r\nas', ''),
-(10, 'miuauipmxd', 'oiaumcaiousd', 2009, 'iounoiuncioauooasicnuoai oniaucoiasdu oiacdoau oiadcoauu aiodcoauo auoicnaosiun oasincoai', '');
+INSERT INTO `evento` (`id_evento`, `nombre`, `lugar`, `anio`, `descripcion`, `fecha`) VALUES
+(1, 'Uno', 'Tijuana | Galeria 1', 5, '<p>\r\n	Plop plop plop plop</p>\r\n', '0000-00-00'),
+(2, 'Nuevo', 'Tijuana', 12, 'ljasdlkajdlkd', '0000-00-00'),
+(3, 'Nuevo', 'Tijuana', 6, 'atwszxerctgvyibuhoni', '0000-00-00'),
+(4, 'Tal evento', 'Arte y galeria', 4, '<p>\r\n	Fue un peque&ntilde;o evento de tal tal tal tal</p>\r\n', '2013-04-17');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `eventosdestacados`
+--
+
+CREATE TABLE IF NOT EXISTS `eventosdestacados` (
+  `id_destacado` int(11) NOT NULL AUTO_INCREMENT,
+  `id_evento` int(11) NOT NULL,
+  PRIMARY KEY (`id_destacado`),
+  KEY `id_evento` (`id_evento`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+
+--
+-- Volcado de datos para la tabla `eventosdestacados`
+--
+
+INSERT INTO `eventosdestacados` (`id_destacado`, `id_evento`) VALUES
+(1, 4);
 
 -- --------------------------------------------------------
 
@@ -247,23 +320,44 @@ INSERT INTO `integrantes` (`id_integrante`, `nombre`, `descripcion`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `logo`
+--
+
+CREATE TABLE IF NOT EXISTS `logo` (
+  `id_logo` int(11) NOT NULL AUTO_INCREMENT,
+  `logo` varchar(300) NOT NULL,
+  PRIMARY KEY (`id_logo`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+
+--
+-- Volcado de datos para la tabla `logo`
+--
+
+INSERT INTO `logo` (`id_logo`, `logo`) VALUES
+(1, 'efe9e-logo.png');
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `nosotros`
 --
 
 CREATE TABLE IF NOT EXISTS `nosotros` (
+  `id_nosotros` int(11) NOT NULL AUTO_INCREMENT,
   `nombre` varchar(255) NOT NULL,
   `descripcion` text NOT NULL,
-  `titulo` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `titulo` varchar(255) NOT NULL,
+  PRIMARY KEY (`id_nosotros`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
 
 --
 -- Volcado de datos para la tabla `nosotros`
 --
 
-INSERT INTO `nosotros` (`nombre`, `descripcion`, `titulo`) VALUES
-('¿Qué es?', '"But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?', 'que'),
-('Misión', '"But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?', 'mision'),
-('Visión', '"But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?', 'vision');
+INSERT INTO `nosotros` (`id_nosotros`, `nombre`, `descripcion`, `titulo`) VALUES
+(1, '¿Qué es?', '"But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?', 'que'),
+(2, 'Misión', '"But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?', 'mision'),
+(3, 'Visión', '"But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?', 'vision');
 
 -- --------------------------------------------------------
 
@@ -279,7 +373,6 @@ CREATE TABLE IF NOT EXISTS `obra` (
   `id_artista` int(11) NOT NULL,
   `en_venta` enum('Si','No') NOT NULL DEFAULT 'No',
   `precio` int(11) DEFAULT NULL,
-  `miniatura` varchar(255) NOT NULL DEFAULT 'obra.gif',
   PRIMARY KEY (`id_obra`),
   KEY `id_artista` (`id_artista`),
   KEY `id_artista_2` (`id_artista`)
@@ -289,46 +382,67 @@ CREATE TABLE IF NOT EXISTS `obra` (
 -- Volcado de datos para la tabla `obra`
 --
 
-INSERT INTO `obra` (`id_obra`, `titulo`, `descripcion`, `imagen`, `id_artista`, `en_venta`, `precio`, `miniatura`) VALUES
-(1, 'oraleee', 'una obrea muy lorem lorem lorem lorem lorem lkjlkñjsdfjbsdkjf', 'slide1.png', 1, 'No', 1990, 'obra.gif'),
-(2, 'ñam ñam ñam', 'kjalskjcflksajnflksdjfklnjasdfkljnañldkfnjlñakjfn lshjfcnalñfdnllsdncfklasnf   klsdjfncklsfn|', 'slide1.png', 5, 'No', 0, 'obra.gif'),
-(3, 'beeeef', 'ljcanjlkasnjlvln llkasdjnlksacnñkasdfoui ñlaksdjcfnlñskadnjf lñasdncklfncd ñklasdncñklsndfcvn ', 'slide1.png', 4, '', 0, 'obra.gif'),
-(4, '', 'ksjahcnasjdhfvklsjdhfkl ksncnjslk klcasjhklfjashdcn alscnjfhklcfn', 'slide1.png', 3, 'No', 0, 'obra.gif'),
-(5, '', 'kasdjhcfksljfn kasnjfhkljahk nasklcnjfklnj kasndcfnkjsajl klasnjclkasfnkl jnklascnjflksjnlk jnaslkcnj', 'slide1.png', 9, '', 0, 'obra.gif'),
-(6, '', 'lsknflsdfnj lanjsclñdfnñ nacslñdfnñl lñnaskcnjñl nlñasnkcñlfnk lñasjcnlñn lñnasclñfnñ ', 'slide1.png', 13, '', 0, 'obra.gif'),
-(7, '', 'lscnjsnfñl ñlaskjdcnñl ñlascknjfñl nlñakcfnlñ lnasdcfnñln ñlanscflñ ñlascnkjlñkn lñascnlñnk aslñdnv', 'slide1.png', 10, '', 0, 'obra.gif'),
-(8, '', 'laskdncfjlsñ lñskadjfncñlk nñlasdcnjlñk lñaksfjcnlñ ', 'slide1.png', 5, '', 0, 'obra.gif'),
-(9, '', 'lsacnkjlskñdvnj asldkfnjclsdfkj saldfcjlsdk nasln', 'slide1.png', 4, '', 0, 'obra.gif'),
-(10, '', 'lcnlskfnj lasdnclsdnaf', 'slide1.png', 2, '', 0, 'obra.gif'),
-(11, '', 'lsackjlank lkasnclnkfv lkasndvlnk ', 'slide1.png', 3, '', 0, 'obra.gif'),
-(12, '', 'una obrea muy lorem lorem lorem lorem lorem lkjlkñjsdfjbsdkjf', 'slide1.png', 1, 'No', 1990, 'obra.gif'),
-(13, '', 'ljcanjlkasnjlvln llkasdjnlksacnñkasdfoui ñlaksdjcfnlñskadnjf lñasdncklfncd ñklasdncñklsndfcvn ', 'slide1.png', 1, '', 0, 'obra.gif'),
-(14, '', 'ksjahcnasjdhfvklsjdhfkl ksncnjslk klcasjhklfjashdcn alscnjfhklcfn', 'slide1.png', 1, 'No', 0, 'obra.gif'),
-(15, '', 'kasdjhcfksljfn kasnjfhkljahk nasklcnjfklnj kasndcfnkjsajl klasnjclkasfnkl jnklascnjflksjnlk jnaslkcnj', 'slide1.png', 1, '', 0, 'obra.gif'),
-(16, '', 'lsknflsdfnj lanjsclñdfnñ nacslñdfnñl lñnaskcnjñl nlñasnkcñlfnk lñasjcnlñn lñnasclñfnñ ', 'slide1.png', 1, '', 0, 'obra.gif'),
-(17, '', 'lscnjsnfñl ñlaskjdcnñl ñlascknjfñl nlñakcfnlñ lnasdcfnñln ñlanscflñ ñlascnkjlñkn lñascnlñnk aslñdnv', 'slide1.png', 1, '', 0, 'obra.gif'),
-(18, '', 'laskdncfjlsñ lñskadjfncñlk nñlasdcnjlñk lñaksfjcnlñ ', 'slide1.png', 1, '', 0, 'obra.gif'),
-(19, '', 'lsacnkjlskñdvnj asldkfnjclsdfkj saldfcjlsdk nasln', 'slide1.png', 1, '', 0, 'obra.gif'),
-(20, '', 'lcnlskfnj lasdnclsdnaf', 'slide1.png', 1, '', 0, 'obra.gif'),
-(21, '', 'una obrea muy lorem lorem lorem lorem lorem lkjlkñjsdfjbsdkjf', 'slide1.png', 1, 'No', 1990, 'obra.gif'),
-(22, '', 'una obrea muy lorem lorem lorem lorem lorem lkjlkñjsdfjbsdkjf', 'slide1.png', 1, 'No', 1990, 'obra.gif'),
-(23, '', 'ljcanjlkasnjlvln llkasdjnlksacnñkasdfoui ñlaksdjcfnlñskadnjf lñasdncklfncd ñklasdncñklsndfcvn ', 'slide1.png', 1, '', 0, 'obra.gif'),
-(24, '', 'ksjahcnasjdhfvklsjdhfkl ksncnjslk klcasjhklfjashdcn alscnjfhklcfn', 'slide1.png', 1, 'No', 0, 'obra.gif'),
-(25, '', 'kasdjhcfksljfn kasnjfhkljahk nasklcnjfklnj kasndcfnkjsajl klasnjclkasfnkl jnklascnjflksjnlk jnaslkcnj', 'slide1.png', 1, '', 0, 'obra.gif'),
-(26, '', 'lsknflsdfnj lanjsclñdfnñ nacslñdfnñl lñnaskcnjñl nlñasnkcñlfnk lñasjcnlñn lñnasclñfnñ ', 'slide1.png', 1, '', 0, 'obra.gif'),
-(27, '', 'lscnjsnfñl ñlaskjdcnñl ñlascknjfñl nlñakcfnlñ lnasdcfnñln ñlanscflñ ñlascnkjlñkn lñascnlñnk aslñdnv', 'slide1.png', 11, '', 0, 'obra.gif'),
-(28, '', 'laskdncfjlsñ lñskadjfncñlk nñlasdcnjlñk lñaksfjcnlñ ', 'slide1.png', 1, '', 0, 'obra.gif'),
-(29, '', 'lsacnkjlskñdvnj asldkfnjclsdfkj saldfcjlsdk nasln', 'slide1.png', 4, '', 0, 'obra.gif'),
-(30, '', 'lcnlskfnj lasdnclsdnaf', 'slide1.png', 2, '', 0, 'obra.gif'),
-(31, '', 'una obrea muy lorem lorem lorem lorem lorem lkjlkñjsdfjbsdkjf', 'obra.gif', 1, 'No', 1990, 'obra.gif'),
-(32, '', 'una obrea muy lorem lorem lorem lorem lorem lkjlkñjsdfjbsdkjf', 'obra.gif', 1, 'No', 1990, 'obra.gif'),
-(33, '', 'ljcanjlkasnjlvln llkasdjnlksacnñkasdfoui ñlaksdjcfnlñskadnjf lñasdncklfncd ñklasdncñklsndfcvn ', 'obra.gif', 4, '', 0, 'obra.gif'),
-(34, '', 'ksjahcnasjdhfvklsjdhfkl ksncnjslk klcasjhklfjashdcn alscnjfhklcfn', 'artista.gif', 3, 'No', 0, 'obra.gif'),
-(35, '', 'kasdjhcfksljfn kasnjfhkljahk nasklcnjfklnj kasndcfnkjsajl klasnjclkasfnkl jnklascnjflksjnlk jnaslkcnj', 'obra.gif', 9, '', 0, 'obra.gif'),
-(36, '', 'lsknflsdfnj lanjsclñdfnñ nacslñdfnñl lñnaskcnjñl nlñasnkcñlfnk lñasjcnlñn lñnasclñfnñ ', 'obra.gif', 13, '', 0, 'obra.gif'),
-(37, '', 'lscnjsnfñl ñlaskjdcnñl ñlascknjfñl nlñakcfnlñ lnasdcfnñln ñlanscflñ ñlascnkjlñkn lñascnlñnk aslñdnv', '', 10, '', 0, 'obra.gif'),
-(38, '', 'laskdncfjlsñ lñskadjfncñlk nñlasdcnjlñk lñaksfjcnlñ ', 'obra.gif', 5, '', 0, 'obra.gif'),
-(39, '', 'lsacnkjlskñdvnj asldkfnjclsdfkj saldfcjlsdk nasln', '', 4, '', 0, 'obra.gif');
+INSERT INTO `obra` (`id_obra`, `titulo`, `descripcion`, `imagen`, `id_artista`, `en_venta`, `precio`) VALUES
+(2, 'ñam ñam ñam', 'kjalskjcflksajnflksdjfklnjasdfkljnañldkfnjlñakjfn lshjfcnalñfdnllsdncfklasnf   klsdjfncklsfn|', '', 5, 'No', 0),
+(3, 'beeeef', 'ljcanjlkasnjlvln llkasdjnlksacnñkasdfoui ñlaksdjcfnlñskadnjf lñasdncklfncd ñklasdncñklsndfcvn ', '', 4, '', 0),
+(4, '', 'ksjahcnasjdhfvklsjdhfkl ksncnjslk klcasjhklfjashdcn alscnjfhklcfn', '', 3, 'No', 0),
+(7, '', 'lscnjsnfñl ñlaskjdcnñl ñlascknjfñl nlñakcfnlñ lnasdcfnñln ñlanscflñ ñlascnkjlñkn lñascnlñnk aslñdnv', '', 10, '', 0),
+(8, '', 'laskdncfjlsñ lñskadjfncñlk nñlasdcnjlñk lñaksfjcnlñ ', '', 5, '', 0),
+(9, '', 'lsacnkjlskñdvnj asldkfnjclsdfkj saldfcjlsdk nasln', '', 4, '', 0),
+(10, '', 'lcnlskfnj lasdnclsdnaf', '', 2, '', 0),
+(11, '', 'lsackjlank lkasnclnkfv lkasndvlnk ', '', 3, '', 0),
+(12, 'Snake', '<p>\r\n	<strong>una obrea muy lorem lorem lorem lorem lorem lkjlk&ntilde;jsdfjbsdkjf</strong></p>\r\n<h3 style="color:blue;">\r\n	<span style="font-family:arial,helvetica,sans-serif;"><strong>Trololol</strong></span></h3>\r\n', '0f347-SnakesOnPlane_Fullpic_1.gif', 1, 'No', 1990),
+(13, '', 'ljcanjlkasnjlvln llkasdjnlksacnñkasdfoui ñlaksdjcfnlñskadnjf lñasdncklfncd ñklasdncñklsndfcvn ', '', 1, '', 0),
+(14, '', 'ksjahcnasjdhfvklsjdhfkl ksncnjslk klcasjhklfjashdcn alscnjfhklcfn', '', 1, 'No', 0),
+(15, '', 'kasdjhcfksljfn kasnjfhkljahk nasklcnjfklnj kasndcfnkjsajl klasnjclkasfnkl jnklascnjflksjnlk jnaslkcnj', '', 1, '', 0),
+(16, '', 'lsknflsdfnj lanjsclñdfnñ nacslñdfnñl lñnaskcnjñl nlñasnkcñlfnk lñasjcnlñn lñnasclñfnñ ', '', 1, '', 0),
+(17, '', 'lscnjsnfñl ñlaskjdcnñl ñlascknjfñl nlñakcfnlñ lnasdcfnñln ñlanscflñ ñlascnkjlñkn lñascnlñnk aslñdnv', '', 1, '', 0),
+(18, '', 'laskdncfjlsñ lñskadjfncñlk nñlasdcnjlñk lñaksfjcnlñ ', '', 1, '', 0),
+(19, '', 'lsacnkjlskñdvnj asldkfnjclsdfkj saldfcjlsdk nasln', '', 1, '', 0),
+(20, '', 'lcnlskfnj lasdnclsdnaf', '', 1, '', 0),
+(21, '', 'una obrea muy lorem lorem lorem lorem lorem lkjlkñjsdfjbsdkjf', '', 1, 'No', 1990),
+(22, '', 'una obrea muy lorem lorem lorem lorem lorem lkjlkñjsdfjbsdkjf', '', 1, 'No', 1990),
+(23, '', 'ljcanjlkasnjlvln llkasdjnlksacnñkasdfoui ñlaksdjcfnlñskadnjf lñasdncklfncd ñklasdncñklsndfcvn ', '', 1, '', 0),
+(24, '', 'ksjahcnasjdhfvklsjdhfkl ksncnjslk klcasjhklfjashdcn alscnjfhklcfn', '', 1, 'No', 0),
+(25, '', 'kasdjhcfksljfn kasnjfhkljahk nasklcnjfklnj kasndcfnkjsajl klasnjclkasfnkl jnklascnjflksjnlk jnaslkcnj', '', 1, '', 0),
+(26, '', 'lsknflsdfnj lanjsclñdfnñ nacslñdfnñl lñnaskcnjñl nlñasnkcñlfnk lñasjcnlñn lñnasclñfnñ ', '', 1, '', 0),
+(27, '', 'lscnjsnfñl ñlaskjdcnñl ñlascknjfñl nlñakcfnlñ lnasdcfnñln ñlanscflñ ñlascnkjlñkn lñascnlñnk aslñdnv', '', 11, '', 0),
+(28, '', 'laskdncfjlsñ lñskadjfncñlk nñlasdcnjlñk lñaksfjcnlñ ', '', 1, '', 0),
+(29, '', 'lsacnkjlskñdvnj asldkfnjclsdfkj saldfcjlsdk nasln', '', 4, '', 0),
+(30, '', 'lcnlskfnj lasdnclsdnaf', '', 2, '', 0),
+(31, '', 'una obrea muy lorem lorem lorem lorem lorem lkjlkñjsdfjbsdkjf', '', 1, 'No', 1990),
+(32, '', 'una obrea muy lorem lorem lorem lorem lorem lkjlkñjsdfjbsdkjf', '', 1, 'No', 1990),
+(33, '', 'ljcanjlkasnjlvln llkasdjnlksacnñkasdfoui ñlaksdjcfnlñskadnjf lñasdncklfncd ñklasdncñklsndfcvn ', '', 4, '', 0),
+(34, '', 'ksjahcnasjdhfvklsjdhfkl ksncnjslk klcasjhklfjashdcn alscnjfhklcfn', 'artista.gif', 3, 'No', 0),
+(37, '', 'lscnjsnfñl ñlaskjdcnñl ñlascknjfñl nlñakcfnlñ lnasdcfnñln ñlanscflñ ñlascnkjlñkn lñascnlñnk aslñdnv', '', 10, '', 0),
+(38, '', 'laskdncfjlsñ lñskadjfncñlk nñlasdcnjlñk lñaksfjcnlñ ', '', 5, '', 0),
+(39, '', 'lsacnkjlskñdvnj asldkfnjclsdfkj saldfcjlsdk nasln', '', 4, '', 0);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `slide`
+--
+
+CREATE TABLE IF NOT EXISTS `slide` (
+  `id_slide` int(11) NOT NULL AUTO_INCREMENT,
+  `titulo` varchar(500) NOT NULL,
+  `enlace` varchar(500) NOT NULL,
+  `imagen` varchar(500) NOT NULL,
+  PRIMARY KEY (`id_slide`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=7 ;
+
+--
+-- Volcado de datos para la tabla `slide`
+--
+
+INSERT INTO `slide` (`id_slide`, `titulo`, `enlace`, `imagen`) VALUES
+(1, 'El sol', 'https://www.facebook.com/', 'b5c1c-sol-alna-post.jpg'),
+(2, 'Humo', 'http://foundation.zurb.com/docs/components/orbit.html', '07066-smokearmy.jpg'),
+(3, 'Ejemplo', 'https://www.facebook.com/', 'e8169-10-(2).jpg'),
+(4, 'Facebook', 'https://www.facebook.com/', '545d4-7511971692_0a2011850f_k.jpg'),
+(5, 'Game boy', 'https://www.facebook.com/alex.spoon', 'b6cde-Gamelinkcablecomparison.jpg'),
+(6, 'Gato', 'Gato', '1b926-12062012008.jpg');
 
 -- --------------------------------------------------------
 
@@ -355,10 +469,34 @@ INSERT INTO `usuario` (`id_usuario`, `nombre`, `password`) VALUES
 --
 
 --
+-- Filtros para la tabla `artistasdestacados`
+--
+ALTER TABLE `artistasdestacados`
+  ADD CONSTRAINT `artistasdestacados_ibfk_1` FOREIGN KEY (`id_artista`) REFERENCES `artista` (`id_artista`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Filtros para la tabla `colaboradoresdestacados`
+--
+ALTER TABLE `colaboradoresdestacados`
+  ADD CONSTRAINT `colaboradoresdestacados_ibfk_1` FOREIGN KEY (`id_colaborador`) REFERENCES `colaborador` (`id_colaborador`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Filtros para la tabla `evento`
+--
+ALTER TABLE `evento`
+  ADD CONSTRAINT `evento_ibfk_1` FOREIGN KEY (`anio`) REFERENCES `anio` (`id_anio`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--
+-- Filtros para la tabla `eventosdestacados`
+--
+ALTER TABLE `eventosdestacados`
+  ADD CONSTRAINT `eventosdestacados_ibfk_1` FOREIGN KEY (`id_evento`) REFERENCES `evento` (`id_evento`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
 -- Filtros para la tabla `obra`
 --
 ALTER TABLE `obra`
-  ADD CONSTRAINT `obra_ibfk_1` FOREIGN KEY (`id_artista`) REFERENCES `artista` (`id_artista`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+  ADD CONSTRAINT `obra_ibfk_2` FOREIGN KEY (`id_artista`) REFERENCES `artista` (`id_artista`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

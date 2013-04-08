@@ -7,7 +7,8 @@ class Colaboradores extends CI_Controller {
 
 	public function index() {
 		$limit = 4;
-
+		$this->load->model("inicio_model");
+		$data["logo"]["logo"] = $this->inicio_model->getlogo();
 		$this->load->model("colaborador_model");
 		$this->load->library('pagination');
 		$numart = $this->colaborador_model->contar_colaboradores();
@@ -35,6 +36,8 @@ class Colaboradores extends CI_Controller {
 
 	public function pagina($offset = 0) {
 		$limit = 4;
+		$this->load->model("inicio_model");
+		$data["logo"]["logo"] = $this->inicio_model->getlogo();
 		$this->load->library('pagination');
 		$this->load->model("colaborador_model");
 
