@@ -38,10 +38,14 @@
                         <legend>Contactanos</legend>
 
                         <label>Nombre</label>
-                        <input type="text" placeholder="Nombre" />
+                        <input type="text" placeholder="Nombre" id="sender_name" name="sender_name"/>
 
                         <label>Correo</label>
-                        <input type="text" placeholder="ej. direccion@dominio.com"/>
+                        <input type="text" placeholder="ej. direccion@dominio.com" id="sender_email" name="sender_email"/>
+                        
+                        <label>Asunto</label>
+                        <input type="text" placeholder="ej. direccion@dominio.com"2 id="sender_email" name="sender_email"/>
+                        
                         
                         <label>Mensaje</label>
                         <textarea placeholder="Mensaje" rows="10"></textarea>
