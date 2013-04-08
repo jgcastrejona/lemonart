@@ -1,7 +1,7 @@
 <header>
     <div class="row">
-        <div class="two columns">
-            <a href="<?= base_url() ?>"><img src="<?= base_url() ?>images/logo.gif"></a>
+        <div class="two columns imgcont">
+            <a class="logoimg" href="<?= base_url() ?>"><img src="<?= base_url() ?>images/logo/<?= $logo[0]["logo"]?>"></a>
         </div>
         <div class="ten columns">
             <nav>

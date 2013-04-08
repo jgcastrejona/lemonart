@@ -28,7 +28,7 @@
     </head>
     <body>
 		<?php
-		$this->load->view("header");
+		$this->load->view("header",$logo);
 		?>
         <div class="row contenedor">
             <div class="ten columns offset-by-one">

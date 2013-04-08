@@ -16,6 +16,11 @@ class inicio_model extends CI_Model {
 		$query = $this->db->get('slide');
 		return $query->result_array();
 	}
+	
+	public function getlogo(){
+		$query = $this->db->get('logo');
+		return $query->result_array();
+	}
 
 //put your code here
 }

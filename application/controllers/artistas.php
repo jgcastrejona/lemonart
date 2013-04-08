@@ -6,6 +6,9 @@ if (!defined('BASEPATH'))
 class Artistas extends CI_Controller {
 
 	public function index() {
+		$this->load->model("inicio_model");
+		$data["logo"]["logo"] = $this->inicio_model->getlogo();
+
 		$limit = 12;
 
 		$this->load->model("artista_model");
@@ -34,6 +37,9 @@ class Artistas extends CI_Controller {
 	}
 
 	public function pagina($offset = 0) {
+		$this->load->model("inicio_model");
+		$data["logo"]["logo"] = $this->inicio_model->getlogo();
+
 		$limit = 12;
 		$this->load->library('pagination');
 		$this->load->model("artista_model");
@@ -61,6 +67,8 @@ class Artistas extends CI_Controller {
 	}
 
 	public function perfil() {
+		$this->load->model("inicio_model");
+		$data["logo"]["logo"] = $this->inicio_model->getlogo();
 		//saca artista de la base
 		$this->load->model("artista_model");
 		$id = $this->uri->segment(3);
@@ -71,11 +79,14 @@ class Artistas extends CI_Controller {
 	}
 
 	public function obra() {
+		$this->load->model("inicio_model");
+		$data["logo"]["logo"] = $this->inicio_model->getlogo();
+		
 		$this->load->model("artista_model");
 		$id = $this->uri->segment(3);
-		$datos["obra"] = $this->artista_model->obtener_obra($id);
-		$datos["artista"] = $this->artista_model->obtener_artista($datos["obra"][0]["id_artista"]);
-		$this->load->view("obra_view", $datos);
+		$data["obra"] = $this->artista_model->obtener_obra($id);
+		$data["artista"] = $this->artista_model->obtener_artista($data["obra"][0]["id_artista"]);
+		$this->load->view("obra_view", $data);
 	}
 
 }

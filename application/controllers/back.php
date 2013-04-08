@@ -42,57 +42,153 @@ class Back extends CI_Controller {
 	}
 
 	public function dashboard() {
-		/* if ($this->isValidated()) {
-
-		  $crud = new grocery_CRUD();
-
-		  $crud->set_table('artista')
-		  ->set_subject('Artista')
-		  ->columns('nombre', "imagen", 'biografia')
-		  ->display_as('nombre', 'Nombre')
-		  ->display_as("imagen", "Imagen")
-		  ->display_as('biografia', 'Biografía');
-
-		  $crud->fields('nombre', "imagen", 'biografia');
-		  $crud->required_fields('nombre', 'biografia');
-		  $crud->set_field_upload('imagen', 'images');
-
-
-		  $output = $crud->render();
-
-		  //$this->_example_output($output);
-
-		  $this->load->view("dashboard_view", $output);
-		  }
-
-		  else
-		  redirect("back/index"); */
 		if ($this->isValidated()) {
-			$crud = new grocery_CRUD();
 
-			$crud->set_table('slide')
-					->set_subject('Slide')
-					->columns('titulo', "enlace", 'imagen')
-					->display_as('titulo', 'Titulo')
-					->display_as("enlace", "Enlace")
-					->display_as('imagen', 'Imagen');
-
-			$crud->fields('titulo', "enlace", 'i');
-			$crud->required_fields('titulo', 'enlace', "imagen");
-			$crud->set_field_upload('imagen', 'images/slide');
-			$crud->callback_after_upload(array($this, 'slide_callback'));
-
-			$output = $crud->render();
-
-			//$this->_example_output($output);
-
-			$this->load->view("dashboard_view", $output);
+			$this->load->model("inicio_model");
+			$data["logo"]["logo"] = $this->inicio_model->getlogo();
+			$this->load->view("dashboard_view",$data);
 		} else {
 			redirect("back/index");
 		}
 	}
 
-	public function inicio() {
+	public function logo() {
+		if ($this->isValidated()) {
+
+			$crud = new grocery_CRUD();
+
+			$crud->set_table('logo')
+					->set_subject('Logo')
+					->columns('logo');
+
+			$crud->edit_fields('logo');
+
+
+
+			$crud->unset_add();
+			$crud->unset_delete();
+			$crud->set_field_upload('logo', 'images/logo');
+			//$crud->callback_after_upload(array($this, 'logo_callback'));
+
+			$output = $crud->render();
+
+			//$this->_example_output($output);
+
+			$this->load->view("grid_view", $output);
+		} else {
+			redirect("back/index");
+		}
+	}
+
+	/* function logo_callback($uploader_response, $field_info, $files_to_upload) {
+	  $this->load->library('image_moo');
+
+	  $file_uploaded = $field_info->upload_path . '/' . $uploader_response[0]->name;
+	  $this->image_moo->load($file_uploaded)->save($file_uploaded, true);
+
+	  return true;
+	  } */
+
+	public function descripcion() {
+		if ($this->isValidated()) {
+
+			$crud = new grocery_CRUD();
+
+			$crud->set_table('descripcion')
+					->set_subject('Descripcion')
+					->columns('texto', 'posicion');
+
+			$crud->edit_fields('texto');
+
+			$crud->unset_add();
+			$crud->unset_delete();
+
+			$output = $crud->render();
+
+			//$this->_example_output($output);
+
+			$this->load->view("grid_view", $output);
+		} else {
+			redirect("back/index");
+		}
+	}
+
+	public function artistasdestacados() {
+		if ($this->isValidated()) {
+
+			$crud = new grocery_CRUD();
+
+			$crud->set_table('artistasdestacados')
+					->set_subject('Artistas destacados')
+					->columns('id_artista')
+					->display_as('id_artista', 'Nombre artista');
+
+			$crud->set_relation("id_artista", "artista", "nombre");
+			$crud->required_fields('id_artista');
+			/* $crud->unset_add();
+			  $crud->unset_delete(); */
+
+			$output = $crud->render();
+
+			//$this->_example_output($output);
+
+			$this->load->view("grid_view", $output);
+		}
+		else
+			redirect("back/index");
+	}
+
+	public function eventosdestacados() {
+		if ($this->isValidated()) {
+
+			$crud = new grocery_CRUD();
+
+			$crud->set_table('eventosdestacados')
+					->set_subject('Eventos destacados')
+					->columns('id_evento')
+					->display_as('id_evento', 'Nombre evento');
+
+			$crud->set_relation("id_evento", "evento", "nombre");
+			$crud->required_fields('id_evento');
+			/* $crud->unset_add();
+			  $crud->unset_delete();
+			 */
+			$output = $crud->render();
+
+			//$this->_example_output($output);
+
+			$this->load->view("grid_view", $output);
+		}
+		else
+			redirect("back/index");
+	}
+
+	public function colaboradoresdestacados() {
+		if ($this->isValidated()) {
+
+			$crud = new grocery_CRUD();
+
+			$crud->set_table('colaboradoresdestacados')
+					->set_subject('Colaboradores destacados')
+					->columns('id_colaborador')
+					->display_as('id_colaborador', 'Nombre colaborador');
+
+			$crud->set_relation("id_colaborador", "colaborador", "nombre");
+			$crud->required_fields('id_colaborador');
+			/* $crud->unset_add();
+			  $crud->unset_delete(); */
+
+			$output = $crud->render();
+
+			//$this->_example_output($output);
+
+			$this->load->view("grid_view", $output);
+		}
+		else
+			redirect("back/index");
+	}
+
+	public function slide() {
 		if ($this->isValidated()) {
 
 			$crud = new grocery_CRUD();
@@ -101,20 +197,9 @@ class Back extends CI_Controller {
 			$this->config->set_item('grocery_crud_file_upload_allow_file_types', 'gif|jpeg|jpg|png');
 
 			$crud->set_table('slide');
-			/*		->set_subject('Artista')
-					->columns('nombre', "imagen", 'biografia')
-					->display_as('nombre', 'Nombre')
-					->display_as("imagen", "Imagen")
-					->display_as('biografia', 'Biografía');*/
-
-
-			/*$crud->fields('nombre', "imagen", 'biografia');
-			$crud->required_fields('nombre', 'biografia');*/
 			$crud->set_field_upload('imagen', 'images/slide');
 
 			$crud->callback_after_upload(array($this, 'slide_callback'));
-
-
 			$output = $crud->render();
 
 			$this->load->view("grid_view", $output);

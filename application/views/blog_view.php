@@ -13,7 +13,7 @@
         <meta name="viewport" content="width=device-width"/>
 
         <title>Lemon Art</title>
-
+		
         <!-- Included CSS Files (Compressed) -->
         <link rel="stylesheet" href="<?= base_url() ?>stylesheets/social_foundicons.css">
         <link rel="stylesheet" href="<?= base_url() ?>stylesheets/social_foundicons_ie7.css">
@@ -23,7 +23,7 @@
     </head>
     <body>
 		<?php
-		$this->load->view("header");
+		$this->load->view("header",$logo);
 		?>
         <div class="contenedor">
 			<div class="row">

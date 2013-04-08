@@ -24,7 +24,7 @@
 	</head>
 	<body>
 		<?php
-		$this->load->view("header");
+		$this->load->view("header",$logo);
 		?>
 		<section>
 			<div class="row">

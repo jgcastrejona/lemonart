@@ -24,7 +24,7 @@
 	</head>
 	<body>
 		<?php
-		$this->load->view("header");
+		$this->load->view("header",$logo);
 		?>
 		<div class="row contenedor">
 			<div class="seven columns">

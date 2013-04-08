@@ -47,7 +47,16 @@ footer{
 }
 
 iframe{
-	margin: 0 auto;
+	width: 100%;
+}
+
+.logoimg img{
+	max-width: 130px;
+	padding-top: 10px;
+}
+
+.imgcont{
+	text-align: center;
 }
 
 /* -----------------------------------------
@@ -148,7 +157,18 @@ img .colaborador-logo{
 
 .imagen-artista{
 	max-width: 300px;
-	
+
 	margin: 0 auto;
 }
 
+/* -----------------------------------------
+   Dashboard
+----------------------------------------- */
+
+.tabs-content li{
+	padding: 20px;
+}
+
+.tabs-content li div h2, .tabs-content li div h3, .tabs-content li div h5,.tabs-content li div h4{
+	text-align: center;
+}
