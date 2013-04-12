@@ -3,7 +3,7 @@
 if (!defined('BASEPATH'))
 	exit('No direct script access allowed');
 
-class evento_model extends CI_Controller {
+class evento_model extends CI_Model {
 
 	public function obtener_eventos($id_anio) {
 		$this->db->select("id_evento,nombre,lugar, anio, descripcion");
