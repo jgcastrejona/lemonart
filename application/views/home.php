@@ -23,9 +23,9 @@
         <script src="javascripts/modernizr.foundation.js"></script>
     </head>
     <body>
-        <?php
-        $this->load->view("header", $logo);
-        ?>
+		<?php
+		$this->load->view("header", $logo);
+		?>
         <section>
             <div class="row">
                 <div class="twelve columns">
@@ -38,32 +38,32 @@
                 <div class="twelve columns">
                     <h3>Novedades</h3>
                     <div id="featured">
-                        <?php
-                        $cont = 1;
-                        foreach ($slides as $slide) {
-                            ?>
-                            <div data-caption="#caption<?= $cont ?>">
-                                <a href="<?= $slide["enlace"] ?>">
-                                    <img src="<?= base_url() ?>images/slide/<?= $slide["imagen"] ?>" alt="slide image">
-                                </a>
-                            </div>
+						<?php
+						$cont = 1;
+						foreach ($slides as $slide) {
+							?>
+							<div data-caption="#caption<?= $cont ?>">
+								<a href="<?= $slide["enlace"] ?>">
+									<img src="<?= base_url() ?>images/slide/<?= $slide["imagen"] ?>" alt="slide image">
+								</a>
+							</div>
 
-                            <?php
-                            $cont++;
-                        }
-                        ?>
+							<?php
+							$cont++;
+						}
+						?>
                     </div>
 
-                    <?php
-                    $cont = 1;
-                    foreach ($slides as $slide) {
-                        ?>
-                        <div class="orbit-caption" id="caption<?= $cont ?>"><?= $slide["titulo"] ?></div>
+					<?php
+					$cont = 1;
+					foreach ($slides as $slide) {
+						?>
+						<div class="orbit-caption" id="caption<?= $cont ?>"><?= $slide["titulo"] ?></div>
 
-                        <?php
-                        $cont++;
-                    }
-                    ?>	
+						<?php
+						$cont++;
+					}
+					?>	
                 </div>
 
             </div>
@@ -85,30 +85,30 @@
             </div>
 
 
-            <?php
-            //var_dump($artistasdestacados);
-            //var_dump($eventosdestacados); //"] = $this->inicio_model->destacadoseventos();
-            //var_dump($colaboradoresdestacados);
-            ?>
+			<?php
+			//var_dump($artistasdestacados);
+			//var_dump($eventosdestacados); //"] = $this->inicio_model->destacadoseventos();
+			//var_dump($colaboradoresdestacados);
+			?>
             <div class="row">
-                <?php
-                $clase = "";
-                $conta = 1;
-                foreach ($artistasdestacados["datos"] as $artista) {
-                    if ($conta >= count($artistasdestacados["datos"])) {
-                        $clase = "end";
-                    }
-                    ?>
-                    <div class = "three columns mobile-two <?= $clase ?>">
-                        <div class = "">
-                            <a href="<?= base_url() ?>artistas/perfil/<?= $artista[0]["id_artista"] ?>"><img src="<?= base_url() ?>/images/artistas/<?= $artista[0]["imagen"] ?>"></a>
-                        </div>
-                    </div>
+				<?php
+				$clase = "";
+				$conta = 1;
+				foreach ($artistasdestacados["datos"] as $artista) {
+					if ($conta >= count($artistasdestacados["datos"])) {
+						$clase = "end";
+					}
+					?>
+					<div class = "three columns mobile-two <?= $clase ?>">
+						<div class = "">
+							<a href="<?= base_url() ?>artistas/perfil/<?= $artista[0]["id_artista"] ?>"><img src="<?= base_url() ?>/images/artistas/<?= $artista[0]["imagen"] ?>"></a>
+						</div>
+					</div>
 
-                    <?php
-                    $conta++;
-                }
-                ?>
+					<?php
+					$conta++;
+				}
+				?>
             </div>
 
             <div class="row">
@@ -132,23 +132,23 @@
             </div>
 
             <div class="row">
-                <?php
-                $clase = "";
-                $conta = 1;
-                foreach ($eventosdestacados["datos"] as $evento) {
-                    if ($conta >= count($eventosdestacados["datos"])) {
-                        $clase = "end";
-                    }
-                    ?>
-                    <div class = "three columns mobile-two <?= $clase ?>">
-                        <div class = "">
-                            <a href="<?= base_url() ?>eventos/evento/<?= $evento[0]["id_evento"] ?>"><img src="<?= base_url() ?>/images/artistas/<?= $evento[0]["imagen"] ?>"></a>
-                        </div>
-                    </div>
-                    <?php
-                    $conta++;
-                }
-                ?>
+				<?php
+				$clase = "";
+				$conta = 1;
+				foreach ($eventosdestacados["datos"] as $evento) {
+					if ($conta >= count($eventosdestacados["datos"])) {
+						$clase = "end";
+					}
+					?>
+					<div class = "three columns mobile-two <?= $clase ?>">
+						<div class = "">
+							<a href="<?= base_url() ?>eventos/evento/<?=$evento[0]["id_evento"]?>"><img src="<?= base_url() ?>/images/artistas/<?=$evento[0]["imagen"]?>"></a>
+						</div>
+					</div>
+					<?php
+					$conta++;
+				}
+				?>
             </div>
 
             <div class="row">
@@ -172,23 +172,23 @@
             </div>
 
             <div class="row">
-                <?php
-                $clase = "";
-                $conta = 1;
-                foreach ($colaboradoresdestacados["datos"] as $colaborador) {
-                    if ($conta >= count($colaboradoresdestacados["datos"])) {
-                        $clase = "end";
-                    }
-                    ?>
-                    <div class = "three columns mobile-two <?= $clase ?>">
-                        <div class = "">
-                            <img src="<?= base_url() ?>images/colaboradores/small/<?= $colaborador[0]["logo"] ?>">
-                        </div>
-                    </div>
-                    <?php
-                    $conta++;
-                }
-                ?>				
+				<?php
+				$clase = "";
+				$conta = 1;
+				foreach ($colaboradoresdestacados["datos"] as $colaborador) {
+					if ($conta >= count($colaboradoresdestacados["datos"])) {
+						$clase = "end";
+					}
+					?>
+					<div class = "three columns mobile-two <?= $clase ?>">
+						<div class = "">
+							<img src="<?= base_url() ?>images/colaboradores/small/<?= $colaborador[0]["logo"] ?>">
+						</div>
+					</div>
+					<?php
+					$conta++;
+				}
+				?>				
 
             </div>
 
@@ -202,7 +202,7 @@
 </section>
 
 <?php
-$this->load->view("footer",$footer);
+$this->load->view("footer", $footer);
 ?>
 
 <!-- Included JS Files (Compressed) -->
