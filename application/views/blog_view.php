@@ -63,7 +63,7 @@
 			</div>
 		</div>
 		<?php
-		$this->load->view("footer");
+		$this->load->view("footer",$footer);
 		?>
 
 		<!-- Included JS Files (Compressed) -->

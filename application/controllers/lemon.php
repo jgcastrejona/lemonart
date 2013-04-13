@@ -10,8 +10,10 @@ class Lemon extends CI_Controller {
         $this->load->model("artista_model");
         $this->load->model("evento_model");
         $this->load->model("colaborador_model");
-        
+
         $data["logo"]["logo"] = $this->inicio_model->getlogo();
+        $data["footer"]["legalfooter"] = $this->inicio_model->legalfooter();
+        $data["footer"]["lemonfooter"] = $this->inicio_model->lemonfooter();
 
         $data["artistasd"] = $this->inicio_model->artistasd();
         $data["eventosd"] = $this->inicio_model->eventosd();
@@ -33,14 +35,14 @@ class Lemon extends CI_Controller {
             $cont++;
         }
 
-        
+
         $cont = 0;
         $data["colaboradoresdestacados"] = $this->inicio_model->destacadoscolaboradores();
         foreach ($data["colaboradoresdestacados"] as $colaborador) {
             $data["colaboradoresdestacados"]["datos"][$cont] = $this->colaborador_model->obtener_colaborador($colaborador["id_colaborador"]);
             $cont++;
         }
-        
+
         $data["slides"] = $this->inicio_model->get_slides();
         $this->load->view('home', $data);
     }

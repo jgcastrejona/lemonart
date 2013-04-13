@@ -56,8 +56,23 @@ class inicio_model extends CI_Model {
 		$query = $this->db->get('colaboradoresdestacados', 4);
 		return $query->result_array();
 	}
-	
-	
+        
+        ////////////////////////////////////////////////////////////////////////
+        public function lemonfooter(){
+            $query = $this->db->get_where("descripcion", array("clave" => "lemonfooter"));
+            return $query->result_array();
+        }
+        
+        public function legalfooter(){
+            $query = $this->db->get_where("descripcion", array("clave" => "legalfooter"));
+            return $query->result_array();
+        }
+        
+        
+
+
+
+
 
 //put your code here
 }

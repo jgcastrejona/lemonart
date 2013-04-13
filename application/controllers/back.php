@@ -11,7 +11,9 @@ class Back extends CI_Controller {
         } else {
             $this->load->model("inicio_model");
             $data["logo"]["logo"] = $this->inicio_model->getlogo();
-            $this->load->view("login_view",$data);
+            $data["footer"]["legalfooter"] = $this->inicio_model->legalfooter();
+            $data["footer"]["lemonfooter"] = $this->inicio_model->lemonfooter();
+            $this->load->view("login_view", $data);
         }
     }
 
@@ -81,15 +83,6 @@ class Back extends CI_Controller {
             redirect("back/index");
         }
     }
-
-    /* function logo_callback($uploader_response, $field_info, $files_to_upload) {
-      $this->load->library('image_moo');
-
-      $file_uploaded = $field_info->upload_path . '/' . $uploader_response[0]->name;
-      $this->image_moo->load($file_uploaded)->save($file_uploaded, true);
-
-      return true;
-      } */
 
     public function descripcion() {
         if ($this->isValidated()) {
@@ -310,6 +303,9 @@ class Back extends CI_Controller {
 
             $crud = new grocery_CRUD();
 
+            $this->load->config('grocery_crud');
+            $this->config->set_item('grocery_crud_file_upload_allow_file_types', 'gif|jpeg|jpg|png');
+
             $crud->set_table('colaborador')
                     ->set_subject('Colaborador')
                     ->columns('nombre', "logo", 'descripcion')
@@ -321,8 +317,7 @@ class Back extends CI_Controller {
             //$crud->fields('nombre', "imagen", 'biografia');
             $crud->required_fields('nombre', 'logo', "descripcion");
             $crud->set_field_upload('logo', 'images/colaboradores');
-
-
+            $crud->callback_after_upload(array($this, 'colaboradores_callback'));
 
             $output = $crud->render();
 
@@ -333,6 +328,17 @@ class Back extends CI_Controller {
 
         else
             redirect("back/index");
+    }
+
+    function colaboradores_callback($uploader_response, $field_info, $files_to_upload) {
+        $this->load->library('image_moo');
+
+        $file_uploaded = $field_info->upload_path . '/' . $uploader_response[0]->name;
+        $file_uploaded2 = $field_info->upload_path . '/small/' . $uploader_response[0]->name;
+        $this->image_moo->load($file_uploaded)->resize_crop(362, 362)->save($file_uploaded, true);
+        $this->image_moo->load($file_uploaded)->resize_crop(205, 205)->save($file_uploaded2, true);
+
+        return true;
     }
 
     public function eventos() {

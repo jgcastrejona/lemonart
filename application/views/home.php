@@ -99,7 +99,7 @@
                         $clase = "end";
                     }
                     ?>
-                    <div class = "three columns <?= $clase ?>">
+                    <div class = "three columns mobile-two <?= $clase ?>">
                         <div class = "">
                             <a href="<?= base_url() ?>artistas/perfil/<?= $artista[0]["id_artista"] ?>"><img src="<?= base_url() ?>/images/artistas/<?= $artista[0]["imagen"] ?>"></a>
                         </div>
@@ -140,7 +140,7 @@
                         $clase = "end";
                     }
                     ?>
-                    <div class = "three columns <?= $clase ?>">
+                    <div class = "three columns mobile-two <?= $clase ?>">
                         <div class = "">
                             <a href="<?= base_url() ?>eventos/evento/<?= $evento[0]["id_evento"] ?>"><img src="<?= base_url() ?>/images/artistas/<?= $evento[0]["imagen"] ?>"></a>
                         </div>
@@ -180,9 +180,9 @@
                         $clase = "end";
                     }
                     ?>
-                    <div class = "three columns <?= $clase ?>">
+                    <div class = "three columns mobile-two <?= $clase ?>">
                         <div class = "">
-                            <img src="<?= base_url() ?>images/colaboradores/<?= $colaborador[0]["logo"] ?>">
+                            <img src="<?= base_url() ?>images/colaboradores/small/<?= $colaborador[0]["logo"] ?>">
                         </div>
                     </div>
                     <?php
@@ -202,7 +202,7 @@
 </section>
 
 <?php
-$this->load->view("footer");
+$this->load->view("footer",$footer);
 ?>
 
 <!-- Included JS Files (Compressed) -->

@@ -8,6 +8,8 @@ class Blog extends CI_Controller {
 	public function index() {
 		$this->load->model("inicio_model");
 		$data["logo"]["logo"] = $this->inicio_model->getlogo();
+                $data["footer"]["legalfooter"] = $this->inicio_model->legalfooter();
+                $data["footer"]["lemonfooter"] = $this->inicio_model->lemonfooter();
 		$limit = 10;
 
 		$this->load->model("blog_model");
@@ -38,6 +40,8 @@ class Blog extends CI_Controller {
 	public function pagina($offset = 0) {
 		$this->load->model("inicio_model");
 		$data["logo"]["logo"] = $this->inicio_model->getlogo();
+                $data["footer"]["legalfooter"] = $this->inicio_model->legalfooter();
+                $data["footer"]["lemonfooter"] = $this->inicio_model->lemonfooter();
 		$limit = 10;
 		$this->load->library('pagination');
 		$this->load->model("blog_model");
@@ -67,6 +71,8 @@ class Blog extends CI_Controller {
 	public function entrada() {
 		$this->load->model("inicio_model");
 		$data["logo"]["logo"] = $this->inicio_model->getlogo();
+                $data["footer"]["legalfooter"] = $this->inicio_model->legalfooter();
+                $data["footer"]["lemonfooter"] = $this->inicio_model->lemonfooter();
 		$this->load->model("blog_model");
 		$data["entrada"] = $this->blog_model->obtener_entrada($this->uri->segment(3));
 		$this->load->view("entrada_view", $data);

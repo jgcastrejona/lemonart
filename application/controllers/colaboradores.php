@@ -9,6 +9,8 @@ class Colaboradores extends CI_Controller {
 		$limit = 4;
 		$this->load->model("inicio_model");
 		$data["logo"]["logo"] = $this->inicio_model->getlogo();
+                $data["footer"]["legalfooter"] = $this->inicio_model->legalfooter();
+                $data["footer"]["lemonfooter"] = $this->inicio_model->lemonfooter();
 		$this->load->model("colaborador_model");
 		$this->load->library('pagination');
 		$numart = $this->colaborador_model->contar_colaboradores();
@@ -38,6 +40,8 @@ class Colaboradores extends CI_Controller {
 		$limit = 4;
 		$this->load->model("inicio_model");
 		$data["logo"]["logo"] = $this->inicio_model->getlogo();
+                $data["footer"]["legalfooter"] = $this->inicio_model->legalfooter();
+                $data["footer"]["lemonfooter"] = $this->inicio_model->lemonfooter();
 		$this->load->library('pagination');
 		$this->load->model("colaborador_model");
 

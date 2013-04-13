@@ -6,9 +6,11 @@ if (!defined('BASEPATH'))
 class Tienda extends CI_Controller {
 
     public function index() {
-		$this->load->model("inicio_model");
-		$data["logo"]["logo"] = $this->inicio_model->getlogo();
-        $this->load->view("tienda_view",$data);
+        $this->load->model("inicio_model");
+        $data["logo"]["logo"] = $this->inicio_model->getlogo();
+        $data["footer"]["legalfooter"] = $this->inicio_model->legalfooter();
+        $data["footer"]["lemonfooter"] = $this->inicio_model->lemonfooter();
+        $this->load->view("tienda_view", $data);
     }
 
 }

@@ -11,6 +11,8 @@
    Shared Styles
 ----------------------------------------- */
 
+
+
 body{
     font-size: 62.5% !important;
 }
@@ -27,6 +29,11 @@ header{
 nav ul li{
     display: inline-block;
     padding: 25px 20px 5px 20px;
+}
+
+.footercont{
+    padding: 15px 0 25px 0;
+    text-align: justify;
 }
 
 .derecha{
